@@ -67,7 +67,7 @@ namespace Cafee
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
-            this.lbUsername.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbUsername.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.lbUsername.Location = new System.Drawing.Point(4, 18);
             this.lbUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUsername.Name = "lbUsername";
@@ -78,7 +78,7 @@ namespace Cafee
             // texUserName
             // 
             this.texUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.texUserName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.texUserName.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.texUserName.Location = new System.Drawing.Point(183, 13);
             this.texUserName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.texUserName.Name = "texUserName";
@@ -99,7 +99,7 @@ namespace Cafee
             // lbDisplayName
             // 
             this.lbDisplayName.AutoSize = true;
-            this.lbDisplayName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbDisplayName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.lbDisplayName.Location = new System.Drawing.Point(4, 18);
             this.lbDisplayName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDisplayName.Name = "lbDisplayName";
@@ -110,7 +110,7 @@ namespace Cafee
             // txtDispalyName
             // 
             this.txtDispalyName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDispalyName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDispalyName.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.txtDispalyName.Location = new System.Drawing.Point(183, 13);
             this.txtDispalyName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtDispalyName.Name = "txtDispalyName";
@@ -130,7 +130,7 @@ namespace Cafee
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(4, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -141,7 +141,7 @@ namespace Cafee
             // txbNewPass
             // 
             this.txbNewPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbNewPass.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbNewPass.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.txbNewPass.Location = new System.Drawing.Point(183, 13);
             this.txbNewPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txbNewPass.Name = "txbNewPass";
@@ -161,7 +161,7 @@ namespace Cafee
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(4, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -172,7 +172,7 @@ namespace Cafee
             // txbPass
             // 
             this.txbPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbPass.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbPass.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.txbPass.Location = new System.Drawing.Point(183, 13);
             this.txbPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txbPass.Name = "txbPass";
@@ -193,7 +193,7 @@ namespace Cafee
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(4, 18);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -204,7 +204,7 @@ namespace Cafee
             // txbReEnterPass
             // 
             this.txbReEnterPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbReEnterPass.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbReEnterPass.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.txbReEnterPass.Location = new System.Drawing.Point(183, 13);
             this.txbReEnterPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txbReEnterPass.Name = "txbReEnterPass";
@@ -213,6 +213,7 @@ namespace Cafee
             // 
             // btnExit
             // 
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Location = new System.Drawing.Point(559, 347);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(94, 37);
@@ -243,7 +244,7 @@ namespace Cafee
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Times New Roman", 10.8F);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormAccountProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Cafee.DAO;
+using Cafee.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -51,8 +53,14 @@ namespace Cafee.BUS
                 }
             }
         }
-        public bool Login()
+        public bool Login(string userName, string passWord)
         {
+            string passwordDecrypt = Encrypt(passWord);
+            Account account = AccountDAO.Instance.Login(userName, passwordDecrypt);
+            if (account!=null)
+            {
+                return true;
+            }
             return false;
         }
     }

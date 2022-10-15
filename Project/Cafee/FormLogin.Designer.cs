@@ -34,8 +34,6 @@ namespace Cafee
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txt1 = new System.Windows.Forms.TextBox();
-            this.txt2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -61,7 +59,7 @@ namespace Cafee
             this.btnLogin.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnLogin.Location = new System.Drawing.Point(50, 202);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(341, 46);
+            this.btnLogin.Size = new System.Drawing.Size(330, 46);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "LOG IN";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -74,7 +72,7 @@ namespace Cafee
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(797, 67);
+            this.label1.Size = new System.Drawing.Size(440, 67);
             this.label1.TabIndex = 6;
             this.label1.Text = "CAFE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -128,36 +126,19 @@ namespace Cafee
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Dock = System.Windows.Forms.DockStyle.Right;
-            this.txtPassword.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(37, 0);
-            this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(293, 36);
+            this.txtPassword.Size = new System.Drawing.Size(293, 42);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
-            // 
-            // txt1
-            // 
-            this.txt1.Location = new System.Drawing.Point(500, 82);
-            this.txt1.Name = "txt1";
-            this.txt1.Size = new System.Drawing.Size(206, 28);
-            this.txt1.TabIndex = 9;
-            // 
-            // txt2
-            // 
-            this.txt2.Location = new System.Drawing.Point(500, 148);
-            this.txt2.Name = "txt2";
-            this.txt2.Size = new System.Drawing.Size(206, 28);
-            this.txt2.TabIndex = 10;
             // 
             // FormLogin
             // 
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 271);
-            this.Controls.Add(this.txt2);
-            this.Controls.Add(this.txt1);
+            this.ClientSize = new System.Drawing.Size(440, 271);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -174,7 +155,6 @@ namespace Cafee
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -187,7 +167,5 @@ namespace Cafee
         private Panel panel2;
         private PictureBox pictureBox2;
         private TextBox txtPassword;
-        private TextBox txt1;
-        private TextBox txt2;
     }
 }

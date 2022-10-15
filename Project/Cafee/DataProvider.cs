@@ -31,23 +31,32 @@ namespace Cafee
             using (SqlConnection connection = new SqlConnection(strCon))
             {
                 connection.Open();
-                SqlCommand command = new SqlCommand(query, connection);
-                if (parameter != null)
+                try
                 {
-                    string[] listPara = query.Split(' ');
-                    int i = 0;
-                    foreach (string item in listPara)
+                    SqlCommand command = new SqlCommand(query, connection);
+                    if (parameter != null)
                     {
-                        if (item.Contains('@'))
+                        string[] listPara = query.Split(' ');
+                        int i = 0;
+                        foreach (string item in listPara)
                         {
-                            command.Parameters.AddWithValue(item, parameter[i]);
-                            i++;
+                            if (item.Contains('@'))
+                            {
+                                command.Parameters.AddWithValue(item, parameter[i]);
+                                i++;
+                            }
                         }
                     }
+                    command.ExecuteNonQuery();
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(data);
+                    connection.Close();
                 }
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(data);
-                connection.Close();
+                catch (SqlException e)
+                {
+                    return null;
+                }
+
             }
             return data;
         }
