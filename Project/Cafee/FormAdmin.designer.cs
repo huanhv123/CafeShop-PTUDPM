@@ -206,6 +206,7 @@ namespace Cafee
             this.dagvBill.RowTemplate.Height = 29;
             this.dagvBill.Size = new System.Drawing.Size(879, 502);
             this.dagvBill.TabIndex = 0;
+            this.dagvBill.SelectionChanged += new System.EventHandler(this.dagvAccount_SelectionChanged);
             // 
             // panel1
             // 
@@ -869,6 +870,7 @@ namespace Cafee
             this.dgvAccount.RowTemplate.Height = 29;
             this.dgvAccount.Size = new System.Drawing.Size(507, 461);
             this.dgvAccount.TabIndex = 0;
+            this.dgvAccount.SelectionChanged += new System.EventHandler(this.dagvAccount_SelectionChanged);
             // 
             // panel24
             // 
@@ -883,7 +885,7 @@ namespace Cafee
             // 
             // btnResetPass
             // 
-            this.btnResetPass.Location = new System.Drawing.Point(214, 165);
+            this.btnResetPass.Location = new System.Drawing.Point(211, 165);
             this.btnResetPass.Name = "btnResetPass";
             this.btnResetPass.Size = new System.Drawing.Size(141, 45);
             this.btnResetPass.TabIndex = 12;
@@ -1011,6 +1013,7 @@ namespace Cafee
             this.button6.TabIndex = 2;
             this.button6.Text = "Xóa";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // button7
             // 
@@ -1020,6 +1023,7 @@ namespace Cafee
             this.button7.TabIndex = 1;
             this.button7.Text = "Sửa";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // button8
             // 
@@ -1029,6 +1033,7 @@ namespace Cafee
             this.button8.TabIndex = 0;
             this.button8.Text = "Thêm";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // FormAdmin
             // 
@@ -1041,6 +1046,7 @@ namespace Cafee
             this.Name = "FormAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAdmin";
+            this.Load += new System.EventHandler(this.FormAdmin_Load);
             this.tcAdmin.ResumeLayout(false);
             this.tpBill.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

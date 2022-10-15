@@ -8,6 +8,7 @@ namespace Cafee.DTO
 {
     internal class Account
     {
+        public int id { get; set; }
         public string username { get; set; }
         public string displayName { get; set; }
         public string password { get; set; }

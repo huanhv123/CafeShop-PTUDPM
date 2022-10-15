@@ -13,3 +13,19 @@ D:\hoc tap\chuyen nganh\PTUDPM\Project\Cafee\obj\Debug\Cafee.FormAccountProfile.
 D:\hoc tap\chuyen nganh\PTUDPM\Project\Cafee\obj\Debug\Cafee.FormAdmin.resources
 D:\hoc tap\chuyen nganh\PTUDPM\Project\Cafee\obj\Debug\Cafee.FormHome.resources
 D:\hoc tap\chuyen nganh\PTUDPM\Project\Cafee\obj\Debug\Cafee.FormTestcs.resources
+D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\bin\Debug\Cafee.exe.config
+D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\bin\Debug\Cafee.exe
+D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\bin\Debug\Cafee.pdb
+D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.csproj.AssemblyReference.cache
+D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.csproj.SuggestedBindingRedirects.cache
+D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.FormAccountProfile.resources
+D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.FormAdmin.resources
+D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.FormHome.resources
+D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.FormLogin.resources
+D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.FormTestcs.resources
+D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.Properties.Resources.resources
+D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.csproj.GenerateResource.cache
+D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.csproj.CoreCompileInputs.cache
+D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.exe
+D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.pdb
+D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.AddAccount.resources

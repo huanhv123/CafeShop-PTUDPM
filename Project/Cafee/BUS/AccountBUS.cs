@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Cafee.DAO;
+using Cafee.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -54,6 +56,32 @@ namespace Cafee.BUS
         public bool Login()
         {
             return false;
+        }
+        public bool AddNew(Account account)
+        {
+            bool result = AccountDAO.Instance.Insert(account);
+            return result;
+        }
+        public Account GetDetail(int ID)
+        {
+            Account account = AccountDAO.Instance.SelectedByCode(ID);
+            return account;
+        }
+        public bool Delete(int ID)
+        {
+            bool result = AccountDAO.Instance.Delete(ID);
+                
+            return result;
+        }
+        public List<Account> GetAll()
+        {
+            List<Account> list = AccountDAO.Instance.SelectAll();
+            return list;
+        }
+        public bool Update(Account account)
+        {
+            bool result = AccountDAO.Instance.Update(account);
+            return result;
         }
     }
 }
