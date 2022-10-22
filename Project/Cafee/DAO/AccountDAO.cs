@@ -5,13 +5,14 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace Cafee.DAO
 {
     internal class AccountDAO
     {
         private static AccountDAO instance;
-
         public static AccountDAO Instance
         {
             get 
@@ -22,7 +23,20 @@ namespace Cafee.DAO
             }
             private set { AccountDAO.instance = value; }
         }
-        private AccountDAO() { }
+        private AccountDAO() {
+        }
+        private Account newAccount(DataRow row)
+        {
+            Account account = new Account()
+            {
+                id = (int)row["id"],
+                username = row["UserName"].ToString(),
+                displayName = row["DisplayName"].ToString(),
+                //password = row["password"].ToString(),
+                type = (int)row["Type"],
+        };
+            return account;
+        }
         public Account Login(string userName, string passWord)
         {
             Account account = null;
@@ -35,17 +49,81 @@ namespace Cafee.DAO
             {
                 foreach (DataRow row in result.Rows)
                 {
-                    account = new Account()
-                    {
-                        id = (int)row["id"],
-                        username = (string)row["UserName"],
-                        displayName = (string)row["DisplayName"],
-                        password = (string)row["PassWord"],
-                        type = (int)row["Type"],
-                    };
+                    account = newAccount(row);
                 }
             }
             return account;
+        }
+        public List<Account> SelectByKeyWord(string keyword)
+        {
+            List<Account> accounts = new List<Account>();
+            String query = "SELECT * FROM Account WHERE UserName LIKE @KeyWord";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { keyword });
+            if (result != null)
+            {
+                foreach (DataRow row in result.Rows)
+                {
+                    Account item = newAccount(row);
+                    accounts.Add(item);
+                }
+            }
+            return accounts;
+        }
+        public List<Account> GetListAccount()
+        {
+            List<Account> accounts = new List<Account>();
+            String query = "select id,UserName, DisplayName, Type from Account ";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            if (result != null)
+            {
+                foreach (DataRow row in result.Rows)
+                {
+                    Account item = newAccount(row);
+                    accounts.Add(item);
+                }
+            }
+            return accounts;
+        }
+        public Account SelectedByCode(int id)
+        {
+            Account account = null;
+            string query = "select * from Account where id= @id";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] {id});
+            if (result != null)
+            {
+                foreach (DataRow row in result.Rows)
+                {
+                    account = newAccount(row);
+                }
+            }
+            return account;
+        }
+        public bool Insert(Account newAccount)
+        {
+            bool result = DataProvider.Instance.ExecuteNonQurey(
+                "INSERT INTO Account(username,displayName,password,type) VALUES( @username , @displayName , @password , @type )",
+                new object[] {newAccount.username, newAccount.displayName, newAccount.password, newAccount.type });
+            if (result == true)
+                return true;
+            return false;          
+        }
+        public bool Update(Account newAccount)
+        {
+            bool result = DataProvider.Instance.ExecuteNonQurey(
+                "UPDATE Account SET displayName= @displayName ,type= @type ,password= @password where id= @ID ",
+                new object[] { newAccount.displayName, newAccount.type, newAccount.password, newAccount.id });
+            if (result == true)
+                return true;
+            return false;
+        }
+        public bool Delete(int id)
+        {
+            bool result = DataProvider.Instance.ExecuteNonQurey(
+                "DELETE FROM Account where id= @id",
+                new object[] { id });
+            if (result == true)
+                return true;
+            return false;
         }
     }
 }

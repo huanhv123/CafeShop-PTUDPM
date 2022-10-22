@@ -52,7 +52,8 @@ namespace Cafee
                     adapter.Fill(data);
                     connection.Close();
                 }
-                catch (SqlException e)
+                //catch (SqlException e)
+                catch
                 {
                     return null;
                 }
@@ -77,32 +78,39 @@ namespace Cafee
             return data;
         }
 
-        public int ExecuteNonQurey(string query, object[] parameter = null)
+        public bool ExecuteNonQurey(string query, object[] parameter = null)
         {
-            int data = 0;
+            bool result = false;
             using (SqlConnection connection = new SqlConnection(strCon))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
-                if (parameter != null)
+                try
                 {
-                    string[] listPara = query.Split(' ');
-                    int i = 0;
-                    foreach (string item in listPara)
+                    if (parameter != null)
                     {
-                        if (item.Contains('@'))
+                        string[] listPara = query.Split(' ');
+                        int i = 0;
+                        foreach (string item in listPara)
                         {
-                            command.Parameters.AddWithValue(item, parameter[i]);
-                            i++;
+                            if (item.Contains('@'))
+                            {
+                                command.Parameters.AddWithValue(item, parameter[i]);
+                                i++;
+                            }
                         }
                     }
+                    ;
+                    result = command.ExecuteNonQuery() > 0;
                 }
-                data = command.ExecuteNonQuery();
+                catch
+                {
+                    return false;
+                }
                 connection.Close();
             }
-            return data;
+            return result;
         }
-
         public object ExecuteScalar(string query, object[] parameter = null)
         {
             object data = 0;
@@ -127,41 +135,6 @@ namespace Cafee
                 connection.Close();
             }
             return data;
-        }
-        public bool ExecuteInsertQuery(string query,object[] parameter=null)
-        {
-            SqlConnection connection = new SqlConnection(strCon);
-            try
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand(query, connection);
-                //com.Parameters.Add(new SqlParameter("@name", newLaptop.name));
-                //com.Parameters.Add(new SqlParameter("@price", newLaptop.price));
-                //com.Parameters.Add(new SqlParameter("@brand", newLaptop.brand));
-                //com.Parameters.Add(new SqlParameter("@quantity", newLaptop.quantity));
-                //command.Parameters.Add(new SqlParameter("@userName", id));
-                if (parameter != null)
-                {
-                    string[] listPara = query.Split(' ');
-                    int i = 0;
-                    foreach (string item in listPara)
-                    {
-                        if (item.Contains('@'))
-                        {
-                            command.Parameters.AddWithValue(item, parameter[i]);
-                            i++;
-                        }
-                    }
-                }
-                command.ExecuteNonQuery();
-            }
-            catch(SqlException e )
-            {
-                Console.Write("Error - ExecuteInsertQuery: "+e.ToString());
-                return false;
-            }
-            connection.Close();
-            return true;
         }
     }
 }

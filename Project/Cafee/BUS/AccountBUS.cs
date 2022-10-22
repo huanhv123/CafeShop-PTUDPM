@@ -63,5 +63,37 @@ namespace Cafee.BUS
             }
             return false;
         }
+        public bool AddNew(Account account)
+        {
+            account.password = Encrypt(account.password);
+            bool result = AccountDAO.Instance.Insert(account);
+            return result;
+        }
+        public Account GetDetail(int ID)
+        {
+            Account account = AccountDAO.Instance.SelectedByCode(ID);
+            return account;
+        }
+        public bool Delete(int ID)
+        {
+            bool result = AccountDAO.Instance.Delete(ID);
+             
+            return result;
+        }
+        public List<Account> Search(String key)
+        {
+            List<Account> accounts = new AccountDAO().SelectByKeyWord(key);
+            return accounts;
+        }
+        public List<Account> GetAllAccount()
+        {
+            List<Account> list = AccountDAO.Instance.GetListAccount();
+            return list;
+        }
+        public bool Update(Account account)
+        {
+            bool result = AccountDAO.Instance.Update(account);
+            return result;
+        }
     }
 }

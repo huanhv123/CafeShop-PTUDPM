@@ -31,7 +31,7 @@ namespace Cafee
             }
             else
             {
-                MessageBox.Show("Sai tài kho?n ho?c m?t kh?u");
+                MessageBox.Show("Sai tài khoàn ho?c m?t kh?u");
             }
         }
         bool Login(string userName,string passWord)

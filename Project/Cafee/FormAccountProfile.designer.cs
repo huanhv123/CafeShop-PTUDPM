@@ -42,11 +42,11 @@ namespace Cafee
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txbPass = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txbReEnterPass = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.txbReEnterPass = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -193,7 +193,7 @@ namespace Cafee
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(4, 18);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -204,7 +204,7 @@ namespace Cafee
             // txbReEnterPass
             // 
             this.txbReEnterPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbReEnterPass.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.txbReEnterPass.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txbReEnterPass.Location = new System.Drawing.Point(183, 13);
             this.txbReEnterPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txbReEnterPass.Name = "txbReEnterPass";
@@ -230,6 +230,37 @@ namespace Cafee
             this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // txbReEnterPass
+            // 
+            this.txbReEnterPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbReEnterPass.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.txbReEnterPass.Location = new System.Drawing.Point(183, 13);
+            this.txbReEnterPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txbReEnterPass.Name = "txbReEnterPass";
+            this.txbReEnterPass.Size = new System.Drawing.Size(443, 34);
+            this.txbReEnterPass.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(4, 18);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 25);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Nhập lại:";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.txbReEnterPass);
+            this.panel5.Location = new System.Drawing.Point(22, 280);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(631, 61);
+            this.panel5.TabIndex = 9;
             // 
             // FormAccountProfile
             // 
@@ -277,10 +308,10 @@ namespace Cafee
         private Panel panel4;
         private Label label2;
         private TextBox txbPass;
-        private Panel panel5;
-        private Label label3;
-        private TextBox txbReEnterPass;
         private Button btnExit;
         private Button btnUpdate;
+        private TextBox txbReEnterPass;
+        private Label label3;
+        private Panel panel5;
     }
 }
