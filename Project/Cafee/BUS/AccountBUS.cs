@@ -82,7 +82,7 @@ namespace Cafee.BUS
         }
         public List<Account> Search(String key)
         {
-            List<Account> accounts = new AccountDAO().SelectByKeyWord(key);
+            List<Account> accounts = AccountDAO.Instance.SelectByKeyWord(key);
             return accounts;
         }
         public List<Account> GetAllAccount()

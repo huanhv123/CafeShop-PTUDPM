@@ -87,5 +87,48 @@ namespace Cafee
         {
 
         }
+
+        //private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    //   MessageBox.Show("dong:" + (e.RowIndex + 1).ToString() + " Cot:" + (e.ColumnIndex + 1).ToString()+ "value:" +dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+        //    if (e.ColumnIndex == 0)
+        //    {
+        //        Category cate = new Category();
+        //        cate.Name = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+        //        cate.Description = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+        //        cate.Picture = ConvertImageToBinary(pictureBox1.Image);
+
+        //        bool rs = cateBus.Insert(cate);
+        //        MessageBox.Show("ket qua:" + rs.ToString());
+        //        dataGridView1.DataSource = cateBus.GetAllCategories();
+        //    }
+
+        //}
+
+        //byte[] ConvertImageToBinary(Image img)
+        //{
+        //    using (MemoryStream ms = new MemoryStream())
+        //    {
+        //        img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+        //        return ms.ToArray();
+        //    }
+        //}
+
+        //string fileName;
+        //private void btnOpenFile_Click(object sender, EventArgs e)
+        //{
+        //    //Read image file
+        //    using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "JPEG|*.jpg", ValidateNames = true, Multiselect = false })
+        //    {
+        //        if (ofd.ShowDialog() == DialogResult.OK)
+        //        {
+        //            fileName = ofd.FileName;
+        //            lblFilename.Text = fileName;
+        //            pictureBox1.Image = Image.FromFile(fileName);
+        //            pictureBox1.Refresh();
+        //        }
+        //    }
+        //}
+
     }
 }

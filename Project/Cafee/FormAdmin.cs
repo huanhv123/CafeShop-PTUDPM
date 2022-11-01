@@ -19,7 +19,8 @@ namespace Cafee
     public partial class FormAdmin : Form
     {
         int idFoodCateCB = 0;
-        string imageFood = "";
+        byte[] imageFood ;
+        bool hasUploadImage=false;
         public FormAdmin()
         {
             InitializeComponent();
@@ -145,31 +146,27 @@ namespace Cafee
                 MessageBox.Show("Update Fail!");
             }
         }
-        private void btnAddNode_Click(object sender, EventArgs e)
-        {
-            TreeNode obj = new TreeNode();
-            obj.Text = "sfsd";
-            //obj.ImageIndex = 0;
-            //obj.SelectedImageIndex = 0;
-            tvCategory.Nodes.Add(obj);
-        }
         private void tvCategory_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            //MessageBox.Show(e.Node.Tag.ToString());
+            smallILFood.Images.Clear();
             lvFood.Items.Clear();
             int foodCateID = Int32.Parse(e.Node.Tag.ToString());
+            int count = 0;
             List<Food> foods = FoodBUS.Instance.ListFoodByFoodCategory(foodCateID);
             foreach (Food food in foods)
             {
                 ListViewItem item = new ListViewItem();
+                smallILFood.Images.Add(ConvertBinaryToImage(food.image));
+                item.ImageIndex = count;
                 item.Text = food.name;
-                item.ImageKey = food.image;
+                //item.ImageKey = Encoding.Default.GetString(food.image);
                 item.SubItems.Add(food.id.ToString());
                 item.SubItems.Add(food.name);
                 item.SubItems.Add(food.idFoodCate.ToString());
                 item.SubItems.Add(food.price.ToString());
-                item.SubItems.Add(food.image);
+                item.SubItems.Add(Encoding.Default.GetString(food.image));
                 lvFood.Items.Add(item);
+                count++;
             }
         }
         private void lvFood_SelectedIndexChanged(object sender, EventArgs e)
@@ -183,89 +180,113 @@ namespace Cafee
                 FoodCategory foodCategorie = FoodCategoryBUS.Instance.GetFoodCategoryByFood(id);
                 cbFood.Text = foodCategorie.name;
                 txtFoodPrice.Text = lvFood.SelectedItems[0].SubItems[4].Text;
-                imageFood = lvFood.SelectedItems[0].SubItems[5].Text;
-                pbFood.Image = Image.FromFile(@"D:\hoc tap\chuyen nganh\PTUDPM\CafeShop-PTUDPM\Project\Cafee\Resources\" + imageFood);
+                pbFood.Image = ConvertBinaryToImage(
+                    Encoding.Default.GetBytes(lvFood.SelectedItems[0].SubItems[5].Text));
             }
-        }
-        public void ReloadInfoFood()
-        {
-            List<FoodCategory> foodCategorieList = FoodCategoryBUS.Instance.ListAllFoodCategory();
-            txtFoodId.Text = lvFood.SelectedItems[0].SubItems[1].Text;
-            txtFoodName.Text = lvFood.SelectedItems[0].SubItems[2].Text;
-            int id = Int32.Parse(lvFood.SelectedItems[0].SubItems[3].Text);
-            FoodCategory foodCategorie = FoodCategoryBUS.Instance.GetFoodCategoryByFood(id);
-            cbFood.Text = foodCategorie.name;
-            txtFoodPrice.Text = lvFood.SelectedItems[0].SubItems[4].Text;
-            imageFood = lvFood.SelectedItems[0].SubItems[5].Text;
-            pbFood.Image = Image.FromFile(@"D:\hoc tap\chuyen nganh\PTUDPM\CafeShop-PTUDPM\Project\Cafee\Resources\" + imageFood);
         }
         private void lvCategoryReload()
         {
             if (tvCategory.SelectedNode.Tag.ToString()!="" || tvCategory.SelectedNode.Tag.ToString()!=null)
             {
+                smallILFood.Images.Clear();
                 lvFood.Items.Clear();
                 int foodCateID = Int32.Parse(tvCategory.SelectedNode.Tag.ToString());
+                int count = 0;
                 List<Food> foods = FoodBUS.Instance.ListFoodByFoodCategory(foodCateID);
                 foreach (Food food in foods)
                 {
                     ListViewItem item = new ListViewItem();
+                    smallILFood.Images.Add(ConvertBinaryToImage(food.image));
+                    item.ImageIndex = count;
                     item.Text = food.name;
-                    item.ImageKey = food.image;
                     item.SubItems.Add(food.id.ToString());
                     item.SubItems.Add(food.name);
                     item.SubItems.Add(food.idFoodCate.ToString());
                     item.SubItems.Add(food.price.ToString());
-                    item.SubItems.Add(food.image);
+                    item.SubItems.Add(Encoding.Default.GetString(food.image));
                     lvFood.Items.Add(item);
+                    count++;
                 }
             }
         }
+        string fileName;
         private void btnUploadImage_Click(object sender, EventArgs e)
         {
-            //open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
             try
             {
-                OpenFileDialog openFile = new OpenFileDialog();
-                if (openFile.ShowDialog() == DialogResult.OK)
-                {
+                //    string path = Path.Combine(
+                //        @"D:\hoc tap\chuyen nganh\PTUDPM\CafeShop-PTUDPM\Project\Cafee\Resources\");
+                //    if (!Directory.Exists(path))
+                //    {
+                //        Directory.CreateDirectory(path);
+                //    }
+                //    var fileName = Path.GetFileName(openFile.FileName);
+                //    path = path + fileName;
+                //    File.Copy(openFile.FileName, path);
+                //    if (imageFood != "")
+                //    {
+                //        pbFood.Image=null;
+                //        //File.Delete(Path.Combine(@"D:\hoc tap\chuyen nganh\PTUDPM\CafeShop-PTUDPM\Project\Cafee\Resources\" , imageFood));
+                //    //smallILFood.Images.RemoveByKey(imageFood);
+                //    //largeilFood.Images.RemoveByKey(imageFood);
 
-                    pbFood.ImageLocation = openFile.FileName;
-                    string path = Path.Combine(
-                        @"D:\hoc tap\chuyen nganh\PTUDPM\CafeShop-PTUDPM\Project\Cafee\Resources\");
-                    if (!Directory.Exists(path))
+                using (OpenFileDialog ofd = new OpenFileDialog()
+                {
+                    Filter = "(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp",
+                    ValidateNames = true,
+                    //Multiselect = false
+                })
+                {
+                    if (ofd.ShowDialog() == DialogResult.OK)
                     {
-                        Directory.CreateDirectory(path);
+                        fileName = ofd.FileName;
+                        //pbFood.Text = fileName;
+                        pbFood.Image = Image.FromFile(fileName);
+                        pbFood.Refresh();
+                        hasUploadImage = true;
+
                     }
-                    var fileName = Path.GetFileName(openFile.FileName);
-                    path = path + fileName;
-                    File.Copy(openFile.FileName, path);
-                    if (imageFood != "")
-                    {
-                        pbFood.Image=null;
-                        //File.Delete(Path.Combine(@"D:\hoc tap\chuyen nganh\PTUDPM\CafeShop-PTUDPM\Project\Cafee\Resources\" , imageFood));
-                    //smallILFood.Images.RemoveByKey(imageFood);
-                    //largeilFood.Images.RemoveByKey(imageFood);
-                    }
-                    imageFood = fileName;
-                  
-                    //smallILFood.Images.Add(imageFood, Image.FromFile("D:\\hoc tap\\chuyen nganh\\PTUDPM\\CafeShop-PTUDPM\\Project\\Cafee\\Resources\\" + imageFood));
-                    //largeilFood.Images.Add(imageFood, Image.FromFile("D:\\hoc tap\\chuyen nganh\\PTUDPM\\CafeShop-PTUDPM\\Project\\Cafee\\Resources\\" + imageFood));
                 }
             }
-            catch(Exception ex)
+            catch 
             {
                 MessageBox.Show("Chọn hình lỗi");
             }
         }
+        byte[] ConvertImageToBinary(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                return ms.ToArray();
+            }
+        }
+        Image ConvertBinaryToImage(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms, true);
+            }
+        }
         private void btnUpdateFoodC_Click(object sender, EventArgs e)
         {
+            byte[] imageFood;
+            if (hasUploadImage)
+            {
+                imageFood = ConvertImageToBinary(pbFood.Image);
+            }
+            else
+            {
+                imageFood = Encoding.Default.GetBytes(lvFood.SelectedItems[0].SubItems[5].Text);
+            }
             Food food = new Food()
             {
                 id = int.Parse(txtFoodId.Text),
                 name = txtFoodName.Text,
                 idFoodCate = int.Parse(cbFood.SelectedValue.ToString()),
                 price = Double.Parse(txtFoodPrice.Text),
-                image= imageFood,
+                image = imageFood,
             };
             bool result = FoodBUS.Instance.UpdateFood(food);
             if (result)
@@ -285,7 +306,7 @@ namespace Cafee
                 name = txtFoodName.Text,
                 idFoodCate = int.Parse(cbFood.SelectedValue.ToString()),
                 price = Double.Parse(txtFoodPrice.Text),
-                image = imageFood,
+                image = ConvertImageToBinary(pbFood.Image),
             };
             bool result = FoodBUS.Instance.AddFood(food);
             if (result)
@@ -306,11 +327,6 @@ namespace Cafee
             if (result)
             {
                 MessageBox.Show("Xóa thành công");
-                //pbFood.Image=null;
-                //File.Delete(Path.Combine(
-                // @"D:\hoc tap\chuyen nganh\PTUDPM\CafeShop-PTUDPM\Project\Cafee\Resources\",imageFood));
-                //smallILFood.Images.RemoveByKey(imageFood);
-                //largeilFood.Images.RemoveByKey(imageFood);
                 lvCategoryReload();
             }
             else

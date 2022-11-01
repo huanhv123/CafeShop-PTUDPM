@@ -31,7 +31,7 @@ namespace Cafee.DAO
                 name = row["name"].ToString(),
                 idFoodCate = (int)row["idFoodCate"],
                 price=(double)row["price"],
-                image=(string)row["image"],
+                image=(byte[])row["image"],
             };
             return food;
         }

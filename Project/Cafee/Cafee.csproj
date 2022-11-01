@@ -57,6 +57,7 @@
     <Compile Include="DAO\CatogoryDAO.cs" />
     <Compile Include="DAO\FoodCategoryDAO.cs" />
     <Compile Include="DAO\FoodDAO.cs" />
+    <Compile Include="DAO\MenuDAO.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="DAO\TableDao.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="DTO\Category.cs" />
     <Compile Include="DTO\Food.cs" />
     <Compile Include="DTO\FoodCategory.cs" />
+    <Compile Include="DTO\Menu.cs" />
     <Compile Include="DTO\Table.cs" />
     <Compile Include="FormAccountProfile.cs">
       <SubType>Form</SubType>
@@ -90,6 +92,12 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTestcs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTestcs.resx">
       <DependentUpon>FormTestcs.cs</DependentUpon>

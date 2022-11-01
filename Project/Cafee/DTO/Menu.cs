@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Cafee.DTO
 {
-    internal class BillInfo
+    internal class Menu
     {
-        public int id { get; set; }
-        public int idBill { get; set; }
-        public int idFood { get; set; }
+        public float totalPrice { get; set; }
+        public float price { get; set; }
         public int count { get; set; }
-        public int idEmployee { get; set; }
+        public string foodName { get; set; }
     }
 }

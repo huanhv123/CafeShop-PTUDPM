@@ -12,6 +12,6 @@ namespace Cafee.DTO
         public string name { get; set; }
         public int idFoodCate { get; set; }
         public double price { get; set; }
-        public string image { get; set; }
+        public byte[] image { get; set; }
     }
 }

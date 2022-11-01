@@ -28,3 +28,4 @@ D:\hoc tap\chuyen nganh\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.csp
 D:\hoc tap\chuyen nganh\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.csproj.CoreCompileInputs.cache
 D:\hoc tap\chuyen nganh\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.exe
 D:\hoc tap\chuyen nganh\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.pdb
+D:\hoc tap\chuyen nganh\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.FormMain.resources
