@@ -121,6 +121,29 @@ namespace Cafee
             this.dtpToData = new System.Windows.Forms.DateTimePicker();
             this.dtpFromData = new System.Windows.Forms.DateTimePicker();
             this.tcAdmin = new System.Windows.Forms.TabControl();
+            this.tpBillD = new System.Windows.Forms.TabPage();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.dgvBill = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtMHD = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.tpCategoryFood.SuspendLayout();
             this.panel29.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -156,6 +179,9 @@ namespace Cafee
             ((System.ComponentModel.ISupportInitialize)(this.dagvBill)).BeginInit();
             this.panel1.SuspendLayout();
             this.tcAdmin.SuspendLayout();
+            this.tpBillD.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // largeilFood
@@ -218,7 +244,7 @@ namespace Cafee
             this.tpCategoryFood.Location = new System.Drawing.Point(4, 29);
             this.tpCategoryFood.Name = "tpCategoryFood";
             this.tpCategoryFood.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCategoryFood.Size = new System.Drawing.Size(887, 549);
+            this.tpCategoryFood.Size = new System.Drawing.Size(1255, 658);
             this.tpCategoryFood.TabIndex = 5;
             this.tpCategoryFood.Text = " Món ăn";
             this.tpCategoryFood.UseVisualStyleBackColor = true;
@@ -231,9 +257,9 @@ namespace Cafee
             this.panel29.Controls.Add(this.panel4);
             this.panel29.Controls.Add(this.label1);
             this.panel29.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel29.Location = new System.Drawing.Point(512, 3);
+            this.panel29.Location = new System.Drawing.Point(880, 3);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(372, 543);
+            this.panel29.Size = new System.Drawing.Size(372, 652);
             this.panel29.TabIndex = 2;
             // 
             // panel5
@@ -245,7 +271,7 @@ namespace Cafee
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 468);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(370, 73);
+            this.panel5.Size = new System.Drawing.Size(370, 182);
             this.panel5.TabIndex = 3;
             // 
             // btnUpdateFoodC
@@ -413,7 +439,7 @@ namespace Cafee
             this.lvFood.Location = new System.Drawing.Point(181, 3);
             this.lvFood.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.lvFood.Name = "lvFood";
-            this.lvFood.Size = new System.Drawing.Size(703, 543);
+            this.lvFood.Size = new System.Drawing.Size(1071, 652);
             this.lvFood.SmallImageList = this.smallILFood;
             this.lvFood.TabIndex = 1;
             this.lvFood.UseCompatibleStateImageBehavior = false;
@@ -428,7 +454,7 @@ namespace Cafee
             this.tvCategory.Location = new System.Drawing.Point(3, 3);
             this.tvCategory.Name = "tvCategory";
             this.tvCategory.SelectedImageKey = "water-bottle.png";
-            this.tvCategory.Size = new System.Drawing.Size(178, 543);
+            this.tvCategory.Size = new System.Drawing.Size(178, 652);
             this.tvCategory.TabIndex = 0;
             this.tvCategory.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvCategory_AfterSelect);
             // 
@@ -442,7 +468,7 @@ namespace Cafee
             this.tpAccount.Location = new System.Drawing.Point(4, 29);
             this.tpAccount.Name = "tpAccount";
             this.tpAccount.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAccount.Size = new System.Drawing.Size(887, 549);
+            this.tpAccount.Size = new System.Drawing.Size(1255, 658);
             this.tpAccount.TabIndex = 4;
             this.tpAccount.Text = "Tài khoản";
             this.tpAccount.UseVisualStyleBackColor = true;
@@ -668,7 +694,7 @@ namespace Cafee
             this.tpTable.Location = new System.Drawing.Point(4, 29);
             this.tpTable.Name = "tpTable";
             this.tpTable.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTable.Size = new System.Drawing.Size(887, 549);
+            this.tpTable.Size = new System.Drawing.Size(1255, 658);
             this.tpTable.TabIndex = 3;
             this.tpTable.Text = "Bàn ăn";
             this.tpTable.UseVisualStyleBackColor = true;
@@ -850,7 +876,7 @@ namespace Cafee
             this.tpCategory.Location = new System.Drawing.Point(4, 29);
             this.tpCategory.Name = "tpCategory";
             this.tpCategory.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCategory.Size = new System.Drawing.Size(887, 549);
+            this.tpCategory.Size = new System.Drawing.Size(1255, 658);
             this.tpCategory.TabIndex = 2;
             this.tpCategory.Text = "Danh mục";
             this.tpCategory.UseVisualStyleBackColor = true;
@@ -1021,7 +1047,7 @@ namespace Cafee
             this.tpBill.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tpBill.Name = "tpBill";
             this.tpBill.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tpBill.Size = new System.Drawing.Size(887, 549);
+            this.tpBill.Size = new System.Drawing.Size(1255, 658);
             this.tpBill.TabIndex = 0;
             this.tpBill.Text = "Doanh thu";
             this.tpBill.UseVisualStyleBackColor = true;
@@ -1037,9 +1063,9 @@ namespace Cafee
             // 
             this.panel2.Controls.Add(this.dagvBill);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(4, 44);
+            this.panel2.Location = new System.Drawing.Point(4, 153);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(879, 502);
+            this.panel2.Size = new System.Drawing.Size(1247, 502);
             this.panel2.TabIndex = 1;
             // 
             // dagvBill
@@ -1050,7 +1076,7 @@ namespace Cafee
             this.dagvBill.Name = "dagvBill";
             this.dagvBill.RowHeadersWidth = 51;
             this.dagvBill.RowTemplate.Height = 29;
-            this.dagvBill.Size = new System.Drawing.Size(879, 502);
+            this.dagvBill.Size = new System.Drawing.Size(1247, 502);
             this.dagvBill.TabIndex = 0;
             this.dagvBill.SelectionChanged += new System.EventHandler(this.dagvAccount_SelectionChanged);
             // 
@@ -1062,7 +1088,7 @@ namespace Cafee
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(879, 35);
+            this.panel1.Size = new System.Drawing.Size(1247, 35);
             this.panel1.TabIndex = 0;
             // 
             // btnViewBill
@@ -1097,6 +1123,7 @@ namespace Cafee
             this.tcAdmin.Controls.Add(this.tpTable);
             this.tcAdmin.Controls.Add(this.tpAccount);
             this.tcAdmin.Controls.Add(this.tpCategoryFood);
+            this.tcAdmin.Controls.Add(this.tpBillD);
             this.tcAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcAdmin.Location = new System.Drawing.Point(0, 0);
             this.tcAdmin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -1104,6 +1131,245 @@ namespace Cafee
             this.tcAdmin.SelectedIndex = 0;
             this.tcAdmin.Size = new System.Drawing.Size(895, 582);
             this.tcAdmin.TabIndex = 0;
+            // 
+            // tpBillD
+            // 
+            this.tpBillD.Controls.Add(this.btnClose);
+            this.tpBillD.Controls.Add(this.btnDelete);
+            this.tpBillD.Controls.Add(this.btnUpdate);
+            this.tpBillD.Controls.Add(this.dgvBill);
+            this.tpBillD.Controls.Add(this.groupBox1);
+            this.tpBillD.Controls.Add(this.label22);
+            this.tpBillD.Location = new System.Drawing.Point(4, 29);
+            this.tpBillD.Name = "tpBillD";
+            this.tpBillD.Padding = new System.Windows.Forms.Padding(3);
+            this.tpBillD.Size = new System.Drawing.Size(887, 549);
+            this.tpBillD.TabIndex = 6;
+            this.tpBillD.Text = "Hóa đơn";
+            this.tpBillD.UseVisualStyleBackColor = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(588, 506);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(111, 27);
+            this.btnClose.TabIndex = 24;
+            this.btnClose.Text = "Đóng";
+            this.btnClose.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(387, 506);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(111, 27);
+            this.btnDelete.TabIndex = 23;
+            this.btnDelete.Text = "Hủy hóa đơn";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(173, 506);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(111, 27);
+            this.btnUpdate.TabIndex = 22;
+            this.btnUpdate.Text = "Sửa hóa đơn";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // dgvBill
+            // 
+            this.dgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBill.Location = new System.Drawing.Point(96, 43);
+            this.dgvBill.Name = "dgvBill";
+            this.dgvBill.RowHeadersWidth = 51;
+            this.dgvBill.RowTemplate.Height = 24;
+            this.dgvBill.Size = new System.Drawing.Size(694, 221);
+            this.dgvBill.TabIndex = 21;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.dateTimePicker3);
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.comboBox4);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.txtMHD);
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.label18);
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.label20);
+            this.groupBox1.Controls.Add(this.label21);
+            this.groupBox1.Location = new System.Drawing.Point(96, 282);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(694, 218);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin chung";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(520, 121);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(151, 34);
+            this.dateTimePicker2.TabIndex = 14;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(406, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 22);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Ra";
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker3.Location = new System.Drawing.Point(520, 67);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(151, 34);
+            this.dateTimePicker3.TabIndex = 12;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(520, 24);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(151, 34);
+            this.comboBox2.TabIndex = 11;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(406, 36);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(64, 22);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "Số bàn";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(520, 165);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(151, 39);
+            this.textBox2.TabIndex = 12;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(406, 176);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(84, 22);
+            this.label16.TabIndex = 13;
+            this.label16.Text = "Tổng tiền";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(162, 121);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(151, 34);
+            this.comboBox4.TabIndex = 8;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(162, 170);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(151, 34);
+            this.comboBox1.TabIndex = 6;
+            // 
+            // txtMHD
+            // 
+            this.txtMHD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMHD.Location = new System.Drawing.Point(162, 28);
+            this.txtMHD.Name = "txtMHD";
+            this.txtMHD.Size = new System.Drawing.Size(151, 30);
+            this.txtMHD.TabIndex = 9;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(28, 176);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(69, 22);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Mã bàn";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(406, 84);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(42, 22);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "Vào";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(28, 127);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(120, 22);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "Tên nhân viên";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(162, 72);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(151, 34);
+            this.comboBox3.TabIndex = 8;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(28, 84);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(68, 22);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "Mã NV";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(28, 36);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(104, 22);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "Mã hóa đơn";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(320, 3);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(239, 32);
+            this.label22.TabIndex = 19;
+            this.label22.Text = "Hóa đơn bán hàng";
             // 
             // FormAdmin
             // 
@@ -1163,6 +1429,11 @@ namespace Cafee
             ((System.ComponentModel.ISupportInitialize)(this.dagvBill)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tcAdmin.ResumeLayout(false);
+            this.tpBillD.ResumeLayout(false);
+            this.tpBillD.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1257,5 +1528,28 @@ namespace Cafee
         private Label label2;
         private Panel panel5;
         private Panel panel4;
+        private TabPage tpBillD;
+        private Button btnClose;
+        private Button btnDelete;
+        private Button btnUpdate;
+        private DataGridView dgvBill;
+        private GroupBox groupBox1;
+        private DateTimePicker dateTimePicker2;
+        private Label label3;
+        private DateTimePicker dateTimePicker3;
+        private ComboBox comboBox2;
+        private Label label15;
+        private TextBox textBox2;
+        private Label label16;
+        private ComboBox comboBox4;
+        private ComboBox comboBox1;
+        private TextBox txtMHD;
+        private Label label17;
+        private Label label18;
+        private Label label19;
+        private ComboBox comboBox3;
+        private Label label20;
+        private Label label21;
+        private Label label22;
     }
 }

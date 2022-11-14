@@ -55,5 +55,19 @@ namespace Cafee
             admin.MdiParent = this;
             admin.Show();
         }
+
+        private void thôngTinTàiKhoànToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAccountProfile accountProfile = new FormAccountProfile();
+            accountProfile.MdiParent = this;
+            accountProfile.Show();
+        }
+
+        private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormStatistical statistical = new FormStatistical();
+            statistical.MdiParent = this;
+            statistical.Show();
+        }
     }
 }
