@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Security.Cryptography;
@@ -6,6 +6,7 @@ using System.Text;
 using System.Windows.Forms;
 using Cafee.DAO;
 using Cafee.BUS;
+using Cafee.DTO;
 
 namespace Cafee
 {
@@ -17,13 +18,15 @@ namespace Cafee
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string userName = this.txtUsername.Text;
-            string passWord = this.txtPassword.Text;
+            string userName = this.txtUsername.Text.Trim();
+            string passWord = this.txtPassword.Text.Trim();
             if (Login(userName, passWord))
             {
-                FormTestcs formTestcs = new FormTestcs();
+                Account accountLogin = AccountBUS.Instance.GetAccountByUsername(userName);
+                int type = accountLogin.type;
+                FormMain formMain = new FormMain(accountLogin);
                 //this.Hide();
-                formTestcs.ShowDialog();
+                formMain.ShowDialog();
                 this.Show();
                 //this.txt1.Text = Encrypt(txtPassword.Text);
                 //string encrypt = Encrypt(txtPassword.Text);
@@ -31,7 +34,7 @@ namespace Cafee
             }
             else
             {
-                MessageBox.Show("Sai t�i kho�n ho?c m?t kh?u");
+                MessageBox.Show("Sai tài khoàn hoặc mật khẩu");
             }
         }
         bool Login(string userName,string passWord)

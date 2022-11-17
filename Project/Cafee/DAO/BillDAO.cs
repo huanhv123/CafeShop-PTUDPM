@@ -34,6 +34,8 @@ namespace Cafee.DAO
             }
             bill.idTable = (int)row["idTable"];
             bill.status = (int)row["status"];
+            if(row["discount"].ToString()!="")
+               bill.discount = (int)row["discount"];
             return bill;
         }
         public int GetUnCheckBillIdByTableId(int id)
@@ -63,11 +65,11 @@ namespace Cafee.DAO
                 return 1;
             }
         }
-        public void CheckOut(int id)
+        public void CheckOut(int id,int discount)
         {
             DataProvider.Instance.ExecuteNonQurey(
-                "UPDATE Bill SET status= 1 where id= @ID",
-            new object[] { id });
+                "UPDATE Bill SET status= 1, discount= @discount where id= @ID",
+            new object[] { discount, id });
         }
     }
 }

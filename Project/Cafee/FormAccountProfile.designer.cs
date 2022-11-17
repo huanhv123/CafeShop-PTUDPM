@@ -32,19 +32,19 @@ namespace Cafee
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbUsername = new System.Windows.Forms.Label();
-            this.texUserName = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbDisplayName = new System.Windows.Forms.Label();
             this.txtDispalyName = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txbNewPass = new System.Windows.Forms.TextBox();
+            this.txtNewPass = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.txbPass = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.txbReEnterPass = new System.Windows.Forms.TextBox();
+            this.txtReEnterPass = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -57,7 +57,7 @@ namespace Cafee
             // panel1
             // 
             this.panel1.Controls.Add(this.lbUsername);
-            this.panel1.Controls.Add(this.texUserName);
+            this.panel1.Controls.Add(this.txtUserName);
             this.panel1.Location = new System.Drawing.Point(22, 12);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
@@ -75,16 +75,16 @@ namespace Cafee
             this.lbUsername.TabIndex = 1;
             this.lbUsername.Text = "Tên đăng nhập:";
             // 
-            // texUserName
+            // txtUserName
             // 
-            this.texUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.texUserName.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.texUserName.Location = new System.Drawing.Point(183, 13);
-            this.texUserName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.texUserName.Name = "texUserName";
-            this.texUserName.ReadOnly = true;
-            this.texUserName.Size = new System.Drawing.Size(443, 34);
-            this.texUserName.TabIndex = 0;
+            this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUserName.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.txtUserName.Location = new System.Drawing.Point(183, 13);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.ReadOnly = true;
+            this.txtUserName.Size = new System.Drawing.Size(443, 34);
+            this.txtUserName.TabIndex = 0;
             // 
             // panel2
             // 
@@ -120,7 +120,7 @@ namespace Cafee
             // panel3
             // 
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.txbNewPass);
+            this.panel3.Controls.Add(this.txtNewPass);
             this.panel3.Location = new System.Drawing.Point(22, 213);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel3.Name = "panel3";
@@ -138,20 +138,21 @@ namespace Cafee
             this.label1.TabIndex = 1;
             this.label1.Text = "Mật khẩu mới:";
             // 
-            // txbNewPass
+            // txtNewPass
             // 
-            this.txbNewPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbNewPass.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.txbNewPass.Location = new System.Drawing.Point(183, 13);
-            this.txbNewPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txbNewPass.Name = "txbNewPass";
-            this.txbNewPass.Size = new System.Drawing.Size(443, 34);
-            this.txbNewPass.TabIndex = 0;
+            this.txtNewPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNewPass.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.txtNewPass.Location = new System.Drawing.Point(183, 13);
+            this.txtNewPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.Size = new System.Drawing.Size(443, 34);
+            this.txtNewPass.TabIndex = 0;
+            this.txtNewPass.UseSystemPasswordChar = true;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.txbPass);
+            this.panel4.Controls.Add(this.txtPass);
             this.panel4.Location = new System.Drawing.Point(22, 146);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel4.Name = "panel4";
@@ -169,47 +170,16 @@ namespace Cafee
             this.label2.TabIndex = 1;
             this.label2.Text = "Mật khẩu:";
             // 
-            // txbPass
+            // txtPass
             // 
-            this.txbPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbPass.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.txbPass.Location = new System.Drawing.Point(183, 13);
-            this.txbPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txbPass.Name = "txbPass";
-            this.txbPass.Size = new System.Drawing.Size(443, 34);
-            this.txbPass.TabIndex = 0;
-            this.txbPass.UseSystemPasswordChar = true;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.txbReEnterPass);
-            this.panel5.Location = new System.Drawing.Point(22, 280);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(631, 61);
-            this.panel5.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(4, 18);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 25);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Nhập lại:";
-            // 
-            // txbReEnterPass
-            // 
-            this.txbReEnterPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbReEnterPass.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txbReEnterPass.Location = new System.Drawing.Point(183, 13);
-            this.txbReEnterPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txbReEnterPass.Name = "txbReEnterPass";
-            this.txbReEnterPass.Size = new System.Drawing.Size(443, 34);
-            this.txbReEnterPass.TabIndex = 0;
+            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPass.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.txtPass.Location = new System.Drawing.Point(183, 13);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(443, 34);
+            this.txtPass.TabIndex = 0;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // btnExit
             // 
@@ -230,16 +200,18 @@ namespace Cafee
             this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // txbReEnterPass
+            // txtReEnterPass
             // 
-            this.txbReEnterPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbReEnterPass.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.txbReEnterPass.Location = new System.Drawing.Point(183, 13);
-            this.txbReEnterPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txbReEnterPass.Name = "txbReEnterPass";
-            this.txbReEnterPass.Size = new System.Drawing.Size(443, 34);
-            this.txbReEnterPass.TabIndex = 0;
+            this.txtReEnterPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtReEnterPass.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.txtReEnterPass.Location = new System.Drawing.Point(183, 13);
+            this.txtReEnterPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtReEnterPass.Name = "txtReEnterPass";
+            this.txtReEnterPass.Size = new System.Drawing.Size(443, 34);
+            this.txtReEnterPass.TabIndex = 0;
+            this.txtReEnterPass.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -255,7 +227,7 @@ namespace Cafee
             // panel5
             // 
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.txbReEnterPass);
+            this.panel5.Controls.Add(this.txtReEnterPass);
             this.panel5.Location = new System.Drawing.Point(22, 280);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel5.Name = "panel5";
@@ -280,6 +252,7 @@ namespace Cafee
             this.Name = "FormAccountProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin cá nhân";
+            this.Load += new System.EventHandler(this.FormAccountProfile_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -298,19 +271,19 @@ namespace Cafee
 
         private Panel panel1;
         private Label lbUsername;
-        private TextBox texUserName;
+        private TextBox txtUserName;
         private Panel panel2;
         private Label lbDisplayName;
         private TextBox txtDispalyName;
         private Panel panel3;
         private Label label1;
-        private TextBox txbNewPass;
+        private TextBox txtNewPass;
         private Panel panel4;
         private Label label2;
-        private TextBox txbPass;
+        private TextBox txtPass;
         private Button btnExit;
         private Button btnUpdate;
-        private TextBox txbReEnterPass;
+        private TextBox txtReEnterPass;
         private Label label3;
         private Panel panel5;
     }

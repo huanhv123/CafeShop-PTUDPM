@@ -18,8 +18,7 @@ namespace Cafee
 {
     public partial class FormAdmin : Form
     {
-        int idFoodCateCB = 0;
-        byte[] imageFood ;
+
         bool hasUploadImage=false;
         public FormAdmin()
         {
@@ -156,7 +155,7 @@ namespace Cafee
             foreach (Food food in foods)
             {
                 ListViewItem item = new ListViewItem();
-                smallILFood.Images.Add(ConvertBinaryToImage(food.image));
+                smallILFood.Images.Add(FoodBUS.Instance.ConvertBinaryToImage(food.image));
                 item.ImageIndex = count;
                 item.Text = food.name;
                 //item.ImageKey = Encoding.Default.GetString(food.image);
@@ -176,11 +175,11 @@ namespace Cafee
                 txtFoodId.Text = lvFood.SelectedItems[0].SubItems[1].Text;
                 txtFoodName.Text = lvFood.SelectedItems[0].SubItems[2].Text;
                 int id = Int32.Parse(lvFood.SelectedItems[0].SubItems[3].Text);
-                idFoodCateCB = id;
+                //idFoodCateCB = id;
                 FoodCategory foodCategorie = FoodCategoryBUS.Instance.GetFoodCategoryByFood(id);
                 cbFood.Text = foodCategorie.name;
                 txtFoodPrice.Text = lvFood.SelectedItems[0].SubItems[4].Text;
-                pbFood.Image = ConvertBinaryToImage(
+                pbFood.Image = FoodBUS.Instance.ConvertBinaryToImage(
                     Encoding.Default.GetBytes(lvFood.SelectedItems[0].SubItems[5].Text));
             }
         }
@@ -196,7 +195,7 @@ namespace Cafee
                 foreach (Food food in foods)
                 {
                     ListViewItem item = new ListViewItem();
-                    smallILFood.Images.Add(ConvertBinaryToImage(food.image));
+                    smallILFood.Images.Add(FoodBUS.Instance.ConvertBinaryToImage(food.image));
                     item.ImageIndex = count;
                     item.Text = food.name;
                     item.SubItems.Add(food.id.ToString());
@@ -253,28 +252,12 @@ namespace Cafee
                 MessageBox.Show("Chọn hình lỗi");
             }
         }
-        byte[] ConvertImageToBinary(Image img)
-        {
-            using (MemoryStream ms = new MemoryStream())
-            {
-                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                return ms.ToArray();
-            }
-        }
-        Image ConvertBinaryToImage(byte[] data)
-        {
-            using (MemoryStream ms = new MemoryStream(data))
-            {
-                return Image.FromStream(ms, true);
-            }
-        }
         private void btnUpdateFoodC_Click(object sender, EventArgs e)
         {
             byte[] imageFood;
             if (hasUploadImage)
             {
-                imageFood = ConvertImageToBinary(pbFood.Image);
+                imageFood = FoodBUS.Instance.ConvertImageToBinary(pbFood.Image);
             }
             else
             {
@@ -289,6 +272,7 @@ namespace Cafee
                 image = imageFood,
             };
             bool result = FoodBUS.Instance.UpdateFood(food);
+            hasUploadImage = false;
             if (result)
             {
                 MessageBox.Show("Cập nhật thành công");
@@ -306,7 +290,7 @@ namespace Cafee
                 name = txtFoodName.Text,
                 idFoodCate = int.Parse(cbFood.SelectedValue.ToString()),
                 price = Double.Parse(txtFoodPrice.Text),
-                image = ConvertImageToBinary(pbFood.Image),
+                image = FoodBUS.Instance.ConvertImageToBinary(pbFood.Image),
             };
             bool result = FoodBUS.Instance.AddFood(food);
             if (result)
@@ -319,7 +303,6 @@ namespace Cafee
                 MessageBox.Show("Thêm thất bại!");
             }
         }
-
         private void btnDeleteFoodC_Click(object sender, EventArgs e)
         {
             int id = int.Parse(txtFoodId.Text);

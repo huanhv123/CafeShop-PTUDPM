@@ -51,5 +51,14 @@ namespace Cafee.DAO
                  "USP_InsertBillInfo @idBill , @idFood , @count ",
                  new object[] { idBill,idFood,count });
         }
+        public bool Delete(int id)
+        {
+            bool result = DataProvider.Instance.ExecuteNonQurey(
+                "DELETE FROM BillInfo where id= @id",
+                new object[] { id });
+            if (result == true)
+                return true;
+            return false;
+        }
     }
 }

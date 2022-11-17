@@ -54,6 +54,20 @@ namespace Cafee.DAO
             }
             return account;
         }
+        public Account GetAccountByUsername(string userName)
+        {
+            Account account = null;
+            string query = "select * from Account where UserName= @userName" ;
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName});
+            if (result != null)
+            {
+                foreach (DataRow row in result.Rows)
+                {
+                    account = newAccount(row);
+                }
+            }
+            return account;
+        }
         public List<Account> SelectByKeyWord(string keyword)
         {
             List<Account> accounts = new List<Account>();
@@ -112,6 +126,15 @@ namespace Cafee.DAO
             bool result = DataProvider.Instance.ExecuteNonQurey(
                 "UPDATE Account SET displayName= @displayName ,type= @type ,password= @password where id= @ID ",
                 new object[] { newAccount.displayName, newAccount.type, newAccount.password, newAccount.id });
+            if (result == true)
+                return true;
+            return false;
+        }
+        public bool UpdateProfile(int id,string userName,string displayName,string pass,string newPass)
+        {
+            bool result = DataProvider.Instance.ExecuteNonQurey(
+                "exec USP_UpdateAccount @id , @userName , @displayName  , @password , @newPassword ",
+                new object[] { id, userName, displayName, pass, newPass });
             if (result == true)
                 return true;
             return false;

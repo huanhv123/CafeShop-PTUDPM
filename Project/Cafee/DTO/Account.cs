@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cafee.DTO
 {
-    internal class Account
+    public class Account
     {
         public int id { get; set; }
         public string username { get; set; }

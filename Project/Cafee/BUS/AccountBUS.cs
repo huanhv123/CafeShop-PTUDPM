@@ -2,6 +2,7 @@
 using Cafee.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -55,13 +56,18 @@ namespace Cafee.BUS
         }
         public bool Login(string userName, string passWord)
         {
-            string passwordDecrypt = Encrypt(passWord);
-            Account account = AccountDAO.Instance.Login(userName, passwordDecrypt);
-            if (account!=null)
+            //string passwordDecrypt = Encrypt(passWord);
+            Account account = AccountDAO.Instance.Login(userName, passWord);
+            if (account != null)
             {
                 return true;
             }
             return false;
+        }
+        public Account GetAccountByUsername(string userName)
+        {
+            Account account = AccountDAO.Instance.GetAccountByUsername(userName);
+            return account;
         }
         public bool AddNew(Account account)
         {
@@ -76,9 +82,7 @@ namespace Cafee.BUS
         }
         public bool Delete(int ID)
         {
-            bool result = AccountDAO.Instance.Delete(ID);
-             
-            return result;
+            return AccountDAO.Instance.Delete(ID);
         }
         public List<Account> Search(String key)
         {
@@ -92,8 +96,11 @@ namespace Cafee.BUS
         }
         public bool Update(Account account)
         {
-            bool result = AccountDAO.Instance.Update(account);
-            return result;
+            return AccountDAO.Instance.Update(account);
+        }
+        public bool UpdateProfile(int id, string userName, string displayName, string pass, string newPass)
+        {
+            return AccountDAO.Instance.UpdateProfile( id, userName,  displayName,  pass,  newPass);
         }
     }
 }

@@ -13,5 +13,6 @@ namespace Cafee.DTO
         public DateTime? DateCheckOut { get; set; }
         public int idTable { get; set; }
         public int status { get; set; }
+        public int discount { get; set; }
     }
 }

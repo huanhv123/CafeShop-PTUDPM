@@ -84,5 +84,21 @@ namespace Cafee.DAO
                 return true;
             return false;
         }
+        public List<Food> ListFoodByKeyWord(string keyword)
+        {
+            string kw = "%" + keyword + "%";
+            List<Food> foods = new List<Food>();
+            String query = "SELECT * FROM Food WHERE name LIKE @KeyWord";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { kw });
+            if (result != null)
+            {
+                foreach (DataRow row in result.Rows)
+                {
+                    Food item = newFood(row);
+                    foods.Add(item);
+                }
+            }
+            return foods;
+        }
     }
 }

@@ -8,6 +8,7 @@ namespace Cafee.DTO
 {
     internal class Menu
     {
+        public int id { get; set; }
         public float totalPrice { get; set; }
         public float price { get; set; }
         public int count { get; set; }

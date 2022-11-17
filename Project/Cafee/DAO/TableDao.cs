@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -41,6 +42,23 @@ namespace Cafee.DTO
                 tables.Add(table);
             }
             return tables;
+        }
+        public Table GetDetailTable(int id)
+        {
+            Table table = null;
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from TableFood where id= @id", new object[] { id });
+            foreach (DataRow item in data.Rows)
+            {
+                table = newTable(item);
+            }
+            return table;
+        }
+        public bool  SwitchTable(int idFisrt,int idSecound)
+        {
+            var result = DataProvider.Instance.ExecuteNonQurey("USP_SwitchTable @idTableFirst , @idTableSeconr ", new object[] { idFisrt , idSecound });
+            if (result == true)
+                return true;
+            return false;
         }
     }
 }

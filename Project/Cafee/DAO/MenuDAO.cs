@@ -26,11 +26,12 @@ namespace Cafee.DAO
         {
             Menu menu = new Menu()
             {
+                id=(int)row["id"],
                 foodName = row["name"].ToString(),
                 count = (int)row["count"],
                 price = (float)Convert.ToDouble(row["price"]),
                 //float.Parse("41.00027357629127", CultureInfo.InvariantCulture.NumberFormat);
-            totalPrice = (float)Convert.ToDouble(row["totalPrice"]),
+                totalPrice = (float)Convert.ToDouble(row["totalPrice"]),
             };
             return menu;
         }
@@ -38,7 +39,7 @@ namespace Cafee.DAO
         {
             List<Menu> menus = new List<Menu>();
             DataTable data = DataProvider.Instance.ExecuteQuery(
-                " select f.name, bi.count, f.price, f.price*bi.count as totalPrice " +
+                "select bi.id, f.name, bi.count, f.price, f.price*bi.count as totalPrice " +
                 "from BillInfo as bi, Bill as b, Food AS f " +
                 "where bi.idBill = b.id and bi.idFood = f.id and b.status = 0  and b.idTable = " + id
                 );
@@ -48,6 +49,15 @@ namespace Cafee.DAO
                 menus.Add(item);
             }
             return menus;
+        }
+        public bool UpdateBillInfo(int idBillInfo, int countFood)
+        {
+            bool result = DataProvider.Instance.ExecuteNonQurey(
+                "UPDATE BillInfo SET count= @count where id= @ID ",
+                new object[] { countFood, idBillInfo });
+            if (result == true)
+                return true;
+            return false;
         }
     }
 }
