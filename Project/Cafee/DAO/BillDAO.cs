@@ -36,6 +36,7 @@ namespace Cafee.DAO
             bill.status = (int)row["status"];
             if(row["discount"].ToString()!="")
                bill.discount = (int)row["discount"];
+            bill.Total = (int)row["Total"];
             return bill;
         }
         public int GetUnCheckBillIdByTableId(int id)
@@ -53,6 +54,40 @@ namespace Cafee.DAO
            DataProvider.Instance.ExecuteNonQurey(
                 "INSERT INTO Bill(DateCheckIn,DateCheckOut,idTable,status) VALUES( GETDATE(), NULL, @idTable ,0 )",
                 new object[] { id });
+        }
+        public List<Bill> LoadBillList()
+        {
+            List<Bill> bills = new List<Bill>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from Bill");
+            foreach (DataRow item in data.Rows)
+            {
+                Bill bill = newBill(item);
+                bills.Add(bill);
+            }
+            return bills;
+        }
+        public Bill GetDetails(int id )
+        {
+           Bill bill = null;
+            string query = "select * from Bill where id= @id" ;
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { id});
+            if (result != null)
+            {
+                foreach (DataRow row in result.Rows)
+                {
+                    bill = newBill(row);
+                }
+            }
+            return bill;
+        }
+        public bool UpdateBill(Bill newBill)
+        {
+            bool result = DataProvider.Instance.ExecuteNonQurey(
+                "UPDATE Bill SET DateCheckIn = @DateCheckIn , DateCheckOut = @DateCheckOut , idTable = @idTable , status= @status , Total = @Total where id= @ID",
+                new object[] {  newBill.DateCheckIn, newBill.DateCheckOut, newBill.idTable , newBill.status, newBill.Total, newBill.id }); 
+            if (result == true)
+                return true;
+            return false;
         }
         public int GetMaxIdBill()
         {

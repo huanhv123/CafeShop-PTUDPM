@@ -19,26 +19,56 @@ namespace Cafee
     public partial class FormAdmin : Form
     {
 
-        bool hasUploadImage=false;
+        bool hasUploadImage = false;
         public FormAdmin()
         {
             InitializeComponent();
-            //LoadAccountList();
-            cbTypeAcount.Items.Add("1");
-            cbTypeAcount.Items.Add("0");
+            cbTypeAcount.Items.Add(1);
+            cbTypeAcount.Items.Add(0);
+
+            cbTableStatus.Items.Add(1);
+            cbTableStatus.Items.Add(0);
+
+
+            cbStatus.Items.Add(1);
+            cbStatus.Items.Add(0);
+
+            cbEStatus.Items.Add(1);
+            cbEStatus.Items.Add(0);
             FormLoadAccount();
+            FormLoadTable();
 
         }
         private void FormAdmin_Load(object sender, EventArgs e)
         {
             FormLoadAccount();
             FormLoadCategory();
+            FormLoadTable();
+            FormLoadBill();
+            FormLoadEmployees();
+            FillChart();
+        }
+
+        private void FormLoadTable()
+        {
+            List<Table> tables = TableBUS.Instance.ListALLTable();
+            dgvTable.DataSource = tables;
         }
         private void FormLoadAccount()
         {
             List<Account> accounts = AccountBUS.Instance.GetAllAccount();
             dgvAccount.DataSource = accounts;
             dgvAccount.Columns["password"].Visible = false;
+        }
+        private void FormLoadBill()
+        {
+            List<Bill> bill = BillBUS.Instance.ListALLBill();
+            dgvBill.DataSource = bill;
+        }
+        private void FormLoadEmployees()
+        {
+            List<Employees> employees = EmployeesBUS.Instance.ListALLEmployees();
+            dgvEmployees.DataSource = employees;
         }
         private void FormLoadCategory()
         {
@@ -47,7 +77,7 @@ namespace Cafee
             cbFood.DisplayMember = "name";
             cbFood.ValueMember = "id";
 
-            List<Category> categories = CategoryBUS.Instance.ListAllCategory() ;
+            List<Category> categories = CategoryBUS.Instance.ListAllCategory();
             int count = 0;
             foreach (Category cate in categories)
             {
@@ -68,10 +98,91 @@ namespace Cafee
                 tvCategory.Nodes.Add(node);
                 count++;
             }
-            //smallILFood.Images.Add("pepsi-vi-chanh-ko-calo.jpg", Image.FromFile("D:\\hoc tap\\chuyen nganh\\PTUDPM\\CafeShop-PTUDPM\\Project\\Cafee\\Resources\\pepsi-vi-chanh-ko-calo.jpg"));
-            //largeilFood.Images.Add("pepsi-vi-chanh-ko-calo.jpg", Image.FromFile("D:\\hoc tap\\chuyen nganh\\PTUDPM\\CafeShop-PTUDPM\\Project\\Cafee\\Resources\\pepsi-vi-chanh-ko-calo.jpg"));
-            //treeView1.SelectedNode = treeView1.Nodes[2];
+
         }
+
+        //Table
+
+        private void dgvTable_SelectionChanged(object sender, EventArgs e)
+        {
+
+            if (dgvTable.SelectedRows.Count > 0)
+            {
+                int ID = int.Parse(dgvTable.SelectedRows[0].Cells["ID"].Value.ToString());
+                Table table = TableBUS.Instance.GetDetail(ID);
+
+                if (table != null)
+                {
+                    txbTableName.Text = table.name;
+                    cbTableStatus.Text = table.status.ToString();
+
+                }
+            }
+        }
+
+
+        private void btnAddTable_Click(object sender, EventArgs e)
+        {
+            Table table = new Table()
+            {
+                id = 0,
+                name = txbTableName.Text,
+                status = (int)cbTableStatus.SelectedItem,
+            };
+            bool result = TableBUS.Instance.AddTable(table);
+            if (result)
+            {
+                FormLoadTable();
+            }
+            else
+            {
+                MessageBox.Show("Add Fail!");
+            }
+
+        }
+
+
+        private void btnUpdateTable_Click(object sender, EventArgs e)
+        {
+            Table tables = new Table()
+            {
+                id = int.Parse(dgvTable.SelectedRows[0].Cells["ID"].Value.ToString()),
+                name = txbTableName.Text,
+                status = (int)cbTableStatus.SelectedItem,
+            };
+            bool result = TableBUS.Instance.UpdateTable(tables);
+            if (result)
+            {
+                FormLoadTable();
+            }
+            else
+            {
+                MessageBox.Show("Update Fail!");
+            }
+        }
+
+
+
+        private void btnDeleteTable_Click(object sender, EventArgs e)
+        {
+
+            DialogResult dialogResult = MessageBox.Show("ARE YOU SURE ?", "CONFIRMATION", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                int ID = int.Parse(dgvTable.SelectedRows[0].Cells["ID"].Value.ToString());
+                bool result = TableBUS.Instance.DeteleTable(ID);
+                if (result)
+                {
+                    FormLoadTable();
+                }
+                else
+                {
+                    MessageBox.Show("Delet Fail!");
+                }
+            }
+        }
+
+        //Account 
         private void dagvAccount_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvAccount.SelectedRows.Count > 0)
@@ -86,10 +197,49 @@ namespace Cafee
                 }
             }
         }
-        private void btnResetPass_Click(object sender, EventArgs e)
+
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            tbResetAccount.ReadOnly = false;
+            Account account = new Account()
+            {
+                id = 0,
+                username = txtAccountUserName.Text,
+                displayName = txtDisplayName.Text,
+                password = tbPass.Text,
+                type = (int)cbTypeAcount.SelectedItem,
+            };
+            bool result = AccountBUS.Instance.AddNew(account);
+            if (result)
+            {
+                FormLoadAccount();
+            }
+            else
+            {
+                MessageBox.Show("Update Fail!");
+            }
         }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+
+            Account account = new Account()
+            {
+                id = int.Parse(dgvAccount.SelectedRows[0].Cells["ID"].Value.ToString()),
+                username = txtAccountUserName.Text,
+                displayName = txtDisplayName.Text,
+                type = (int)cbTypeAcount.SelectedItem,
+            };
+            bool result = AccountBUS.Instance.Update(account);
+            if (result)
+            {
+                FormLoadAccount();
+            }
+            else
+            {
+                MessageBox.Show("Update Fail!");
+            }
+        }
+
         private void btn_delete_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("ARE YOU SURE ?", "CONFIRMATION", MessageBoxButtons.YesNo);
@@ -107,44 +257,157 @@ namespace Cafee
                 }
             }
         }
-        private void btn_update_Click(object sender, EventArgs e)
+
+        //Bill
+
+        private void dgvBill_SelectionChanged(object sender, EventArgs e)
         {
-            Account account = new Account()
+            if (dgvBill.SelectedRows.Count > 0)
             {
-                id = int.Parse(dgvAccount.SelectedRows[0].Cells["ID"].Value.ToString()),
-                username = txtAccountUserName.Text,
-                displayName = txtDisplayName.Text,
-                type = cbTypeAcount.SelectedIndex,
+                int ID = int.Parse(dgvBill.SelectedRows[0].Cells["ID"].Value.ToString());
+                Bill bill = BillBUS.Instance.GetDetails(ID);
+                Console.WriteLine(bill);
+
+                if (bill != null)
+                {
+                    txtMHD.Text = bill.id.ToString();
+                    txtTableId.Text = bill.idTable.ToString();
+                    txtTableName.Text = TableBUS.Instance.GetDetail(bill.idTable).name;
+                    dtIn.Text = bill.DateCheckIn.ToString();
+                    dtOut.Text = bill.DateCheckOut.ToString();
+                    cbStatus.Text = bill.status.ToString();
+                    txtDiscount.Text = bill.discount.ToString();
+                    txtTotal.Text = bill.Total.ToString();
+
+
+                }
+            }
+        }
+
+        private void btnUpdateBill_Click(object sender, EventArgs e)
+        {
+            Bill bill = new Bill()
+            {
+                id = int.Parse(dgvBill.SelectedRows[0].Cells["ID"].Value.ToString()),
+                idTable = int.Parse(txtTableId.Text),
+                DateCheckIn = dtIn.Value,
+                DateCheckOut = dtOut.Value,
+                status = (int)cbStatus.SelectedItem,
+                discount = int.Parse(txtDiscount.Text),
+                Total = int.Parse(txtTotal.Text),
             };
-            bool result = AccountBUS.Instance.Update(account);
+            bool result = BillBUS.Instance.UpdateBill(bill);
             if (result)
             {
-                FormLoadAccount();
+                FormLoadBill();
             }
             else
             {
                 MessageBox.Show("Update Fail!");
             }
+
         }
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            Account account = new Account()
+            this.Close();
+        }
+
+
+        //Employees
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            String key = txtKeyword.Text.Trim();
+            List<Employees> employees = new List<Employees>();
+            if (key.Length > 0)
+            {
+                employees = EmployeesBUS.Instance.GetDetailByName(key);
+            }
+            else
+            {
+                employees = EmployeesBUS.Instance.ListALLEmployees();
+            }
+            dgvEmployees.DataSource = employees;
+        }
+
+        private void dgvEmployees_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvEmployees.SelectedRows.Count > 0)
+            {
+                int ID = int.Parse(dgvEmployees.SelectedRows[0].Cells["ID"].Value.ToString());
+                Employees employees = EmployeesBUS.Instance.GetDetails(ID);
+                if (employees != null)
+                {
+                    txtEName.Text = employees.name.ToString();
+                    dtEBirthday.Text = employees.birthday.ToString();
+                    txtEAdd.Text = employees.address.ToString();
+                    txtEPhone.Text = employees.phone.ToString();
+                    txtEPosition.Text = employees.position.ToString();
+                    cbEStatus.Text = employees.workingstatus.ToString();
+
+                }
+            }
+        }
+        private void btnAddEmployees_Click(object sender, EventArgs e)
+        {
+            Employees employees = new Employees()
             {
                 id = 0,
-                username = txtAccountUserName.Text,
-                displayName = txtDisplayName.Text,
-                type = cbTypeAcount.SelectedIndex,
+                name = txtEName.Text,
+                birthday = dtEBirthday.Value,
+                address = txtEAdd.Text,
+                phone = txtEPhone.Text,
+                position = txtEPosition.Text,
+                workingstatus = (int)cbEStatus.SelectedItem,
+
             };
-            bool result = AccountBUS.Instance.AddNew(account);
+
+            bool result = EmployeesBUS.Instance.AddEmployees(employees);
             if (result)
             {
-                FormLoadAccount();
+                FormLoadEmployees();
+            }
+            else
+            {
+                MessageBox.Show("Add Fail!");
+            }
+        }
+        private void btnUpdateEmployees_Click(object sender, EventArgs e)
+        {
+            Employees employees = new Employees()
+            {
+                id = int.Parse(dgvEmployees.SelectedRows[0].Cells["ID"].Value.ToString()),
+                name = txtEName.Text,
+                birthday = dtEBirthday.Value,
+                address = txtEAdd.Text,
+                phone = txtEPhone.Text,
+                position = txtEPosition.Text,
+                workingstatus = (int)cbEStatus.SelectedItem,
+
+            };
+
+            bool result = EmployeesBUS.Instance.UpdateEmployees(employees);
+            if (result)
+            {
+                FormLoadEmployees();
             }
             else
             {
                 MessageBox.Show("Update Fail!");
             }
         }
+
+       
+
+
+
+        private void btnResetPass_Click(object sender, EventArgs e)
+        {
+            tbPass.ReadOnly = false;
+        }
+
+        //Food
+
         private void tvCategory_AfterSelect(object sender, TreeViewEventArgs e)
         {
             smallILFood.Images.Clear();
@@ -158,7 +421,7 @@ namespace Cafee
                 smallILFood.Images.Add(FoodBUS.Instance.ConvertBinaryToImage(food.image));
                 item.ImageIndex = count;
                 item.Text = food.name;
-                //item.ImageKey = Encoding.Default.GetString(food.image);
+
                 item.SubItems.Add(food.id.ToString());
                 item.SubItems.Add(food.name);
                 item.SubItems.Add(food.idFoodCate.ToString());
@@ -170,12 +433,12 @@ namespace Cafee
         }
         private void lvFood_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lvFood.SelectedItems.Count>0)
+            if (lvFood.SelectedItems.Count > 0)
             {
                 txtFoodId.Text = lvFood.SelectedItems[0].SubItems[1].Text;
                 txtFoodName.Text = lvFood.SelectedItems[0].SubItems[2].Text;
                 int id = Int32.Parse(lvFood.SelectedItems[0].SubItems[3].Text);
-                //idFoodCateCB = id;
+
                 FoodCategory foodCategorie = FoodCategoryBUS.Instance.GetFoodCategoryByFood(id);
                 cbFood.Text = foodCategorie.name;
                 txtFoodPrice.Text = lvFood.SelectedItems[0].SubItems[4].Text;
@@ -185,7 +448,7 @@ namespace Cafee
         }
         private void lvCategoryReload()
         {
-            if (tvCategory.SelectedNode.Tag.ToString()!="" || tvCategory.SelectedNode.Tag.ToString()!=null)
+            if (tvCategory.SelectedNode.Tag.ToString() != "" || tvCategory.SelectedNode.Tag.ToString() != null)
             {
                 smallILFood.Images.Clear();
                 lvFood.Items.Clear();
@@ -213,21 +476,7 @@ namespace Cafee
         {
             try
             {
-                //    string path = Path.Combine(
-                //        @"D:\hoc tap\chuyen nganh\PTUDPM\CafeShop-PTUDPM\Project\Cafee\Resources\");
-                //    if (!Directory.Exists(path))
-                //    {
-                //        Directory.CreateDirectory(path);
-                //    }
-                //    var fileName = Path.GetFileName(openFile.FileName);
-                //    path = path + fileName;
-                //    File.Copy(openFile.FileName, path);
-                //    if (imageFood != "")
-                //    {
-                //        pbFood.Image=null;
-                //        //File.Delete(Path.Combine(@"D:\hoc tap\chuyen nganh\PTUDPM\CafeShop-PTUDPM\Project\Cafee\Resources\" , imageFood));
-                //    //smallILFood.Images.RemoveByKey(imageFood);
-                //    //largeilFood.Images.RemoveByKey(imageFood);
+
 
                 using (OpenFileDialog ofd = new OpenFileDialog()
                 {
@@ -247,7 +496,7 @@ namespace Cafee
                     }
                 }
             }
-            catch 
+            catch
             {
                 MessageBox.Show("Chọn hình lỗi");
             }
@@ -318,6 +567,23 @@ namespace Cafee
             }
         }
 
-        
+        //Statistical
+        private void FillChart()
+        {
+            SqlConnection con = new SqlConnection("Data Source=LAPTOP-0H23TTCU;Initial Catalog=CafeShop;Persist Security Info=True;User ID=sa;Password=1");
+
+            DataTable dt = new DataTable();
+            con.Open();
+            SqlDataAdapter ad = new SqlDataAdapter("select idTable,Total from Bill", con);
+            ad.Fill(dt);
+            chartBill.DataSource = dt;
+            con.Close();
+
+            chartBill.Series["Bill"].XValueMember = "IdTable";
+            chartBill.Series["Bill"].YValueMembers = "Total";
+            chartBill.Titles.Add("Bill");
+        }
+
+
     }
 }

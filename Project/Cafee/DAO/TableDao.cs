@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cafee.DTO
+using Cafee.DTO;
+namespace Cafee.DAO
 {
     internal class TableDao
     {
@@ -53,9 +53,36 @@ namespace Cafee.DTO
             }
             return table;
         }
-        public bool  SwitchTable(int idFisrt,int idSecound)
+        public bool AddTable(Table newTable)
         {
-            var result = DataProvider.Instance.ExecuteNonQurey("USP_SwitchTable @idTableFirst , @idTableSeconr ", new object[] { idFisrt , idSecound });
+            bool result = DataProvider.Instance.ExecuteNonQurey(
+                "INSERT INTO TableFood(name, status) VALUES( @name , @status )",
+                new object[] { newTable.name, newTable.status, newTable.id });
+            if (result == true)
+                return true;
+            return false;
+        }
+        public bool UpdateTable(Table newTable)
+        {
+            bool result = DataProvider.Instance.ExecuteNonQurey(
+                "UPDATE TableFood SET name= @name ,status= @status where id= @ID",
+                new object[] { newTable.name, newTable.status, newTable.id });
+            if (result == true)
+                return true;
+            return false;
+        }
+        public bool DeteleTable(int id)
+        {
+            bool result = DataProvider.Instance.ExecuteNonQurey(
+                "DELETE FROM TableFood where id= @id ",
+                new object[] { id });
+            if (result == true)
+                return true;
+            return false;
+        }
+        public bool SwitchTable(int idFisrt, int idSecound)
+        {
+            var result = DataProvider.Instance.ExecuteNonQurey("USP_SwitchTable @idTableFirst , @idTableSeconr ", new object[] { idFisrt, idSecound });
             if (result == true)
                 return true;
             return false;

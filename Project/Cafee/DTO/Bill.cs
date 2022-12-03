@@ -14,5 +14,9 @@ namespace Cafee.DTO
         public int idTable { get; set; }
         public int status { get; set; }
         public int discount { get; set; }
+
+        public float Total { get; set; }
+
+
     }
 }
