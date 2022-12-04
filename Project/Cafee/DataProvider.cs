@@ -80,6 +80,7 @@ namespace Cafee
 
         public bool ExecuteNonQurey(string query, object[] parameter = null)
         {
+         
             bool result = false;
             using (SqlConnection connection = new SqlConnection(strCon))
             {

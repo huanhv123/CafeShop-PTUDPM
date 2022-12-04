@@ -13,5 +13,10 @@ namespace Cafee.DTO
         public string displayName { get; set; }
         public string password { get; set; }
         public int type { get; set; }
+
+        public override string ToString()
+        {
+            return "Account{id:" + id + " username:" + username + " password:" + password +"}";
+        }
     }
 }

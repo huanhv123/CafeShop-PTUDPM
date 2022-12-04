@@ -71,7 +71,7 @@ namespace Cafee.BUS
         }
         public bool AddNew(Account account)
         {
-            account.password = Encrypt(account.password);
+            //account.password = Encrypt(account.password);
             bool result = AccountDAO.Instance.Insert(account);
             return result;
         }

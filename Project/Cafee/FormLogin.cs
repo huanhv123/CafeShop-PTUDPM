@@ -41,5 +41,10 @@ namespace Cafee
         {
             return AccountBUS.Instance.Login(userName,passWord);
         }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

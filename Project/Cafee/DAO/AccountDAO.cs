@@ -124,8 +124,8 @@ namespace Cafee.DAO
         public bool Update(Account newAccount)
         {
             bool result = DataProvider.Instance.ExecuteNonQurey(
-                "UPDATE Account SET displayName= @displayName ,type= @type ,password= @password where id= @ID ",
-                new object[] { newAccount.displayName, newAccount.type, newAccount.password, newAccount.id });
+                "UPDATE Account SET displayName= @displayName ,type= @type where id= @ID",
+                new object[] { newAccount.displayName, newAccount.type, newAccount.id });
             if (result == true)
                 return true;
             return false;
