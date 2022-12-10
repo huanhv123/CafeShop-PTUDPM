@@ -1,5 +1,6 @@
 ﻿using Cafee.BUS;
 using Cafee.DTO;
+using CafeeShop;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

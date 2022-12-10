@@ -40,7 +40,6 @@ namespace Cafee
             this.dgvBill = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtDiscount = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTableName = new System.Windows.Forms.TextBox();
@@ -56,6 +55,7 @@ namespace Cafee
             this.label18 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.tpCategoryFood = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
             this.tabCategoryFood = new System.Windows.Forms.TabControl();
@@ -128,12 +128,6 @@ namespace Cafee
             this.label4 = new System.Windows.Forms.Label();
             this.txbTableName = new System.Windows.Forms.TextBox();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.tpBill = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dagvBill = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnViewBill = new System.Windows.Forms.Button();
-            this.dtpToData = new System.Windows.Forms.DateTimePicker();
             this.tcAdmin = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button9 = new System.Windows.Forms.Button();
@@ -160,7 +154,6 @@ namespace Cafee
             this.label26 = new System.Windows.Forms.Label();
             this.txtEName = new System.Windows.Forms.TextBox();
             this.dgvEmployees = new System.Windows.Forms.DataGridView();
-            this.dtpFromData = new System.Windows.Forms.DateTimePicker();
             this.tpBillD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -190,10 +183,6 @@ namespace Cafee
             this.panel16.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel19.SuspendLayout();
-            this.tpBill.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dagvBill)).BeginInit();
-            this.panel1.SuspendLayout();
             this.tcAdmin.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -304,16 +293,6 @@ namespace Cafee
             this.txtDiscount.ReadOnly = true;
             this.txtDiscount.Size = new System.Drawing.Size(151, 33);
             this.txtDiscount.TabIndex = 21;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(29, 121);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(164, 25);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Tên danh mục:";
             // 
             // cbStatus
             // 
@@ -456,6 +435,16 @@ namespace Cafee
             this.label22.Size = new System.Drawing.Size(239, 32);
             this.label22.TabIndex = 19;
             this.label22.Text = "Hóa đơn bán hàng";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(29, 121);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(164, 25);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Tên danh mục:";
             // 
             // tpCategoryFood
             // 
@@ -1229,70 +1218,8 @@ namespace Cafee
             this.panel21.Size = new System.Drawing.Size(507, 70);
             this.panel21.TabIndex = 8;
             // 
-            // tpBill
-            // 
-            this.tpBill.Controls.Add(this.panel2);
-            this.tpBill.Controls.Add(this.panel1);
-            this.tpBill.Location = new System.Drawing.Point(4, 29);
-            this.tpBill.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tpBill.Name = "tpBill";
-            this.tpBill.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tpBill.Size = new System.Drawing.Size(887, 549);
-            this.tpBill.TabIndex = 0;
-            this.tpBill.Text = "Doanh thu";
-            this.tpBill.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dagvBill);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(4, 44);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(879, 502);
-            this.panel2.TabIndex = 1;
-            // 
-            // dagvBill
-            // 
-            this.dagvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dagvBill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dagvBill.Location = new System.Drawing.Point(0, 0);
-            this.dagvBill.Name = "dagvBill";
-            this.dagvBill.RowHeadersWidth = 51;
-            this.dagvBill.RowTemplate.Height = 29;
-            this.dagvBill.Size = new System.Drawing.Size(879, 502);
-            this.dagvBill.TabIndex = 0;
-            this.dagvBill.SelectionChanged += new System.EventHandler(this.dagvAccount_SelectionChanged);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dtpFromData);
-            this.panel1.Controls.Add(this.btnViewBill);
-            this.panel1.Controls.Add(this.dtpToData);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(4, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(879, 35);
-            this.panel1.TabIndex = 0;
-            // 
-            // btnViewBill
-            // 
-            this.btnViewBill.Location = new System.Drawing.Point(391, 3);
-            this.btnViewBill.Name = "btnViewBill";
-            this.btnViewBill.Size = new System.Drawing.Size(94, 28);
-            this.btnViewBill.TabIndex = 2;
-            this.btnViewBill.Text = "Thống kê";
-            this.btnViewBill.UseVisualStyleBackColor = true;
-            // 
-            // dtpToData
-            // 
-            this.dtpToData.Location = new System.Drawing.Point(585, 4);
-            this.dtpToData.Name = "dtpToData";
-            this.dtpToData.Size = new System.Drawing.Size(290, 28);
-            this.dtpToData.TabIndex = 1;
-            // 
             // tcAdmin
             // 
-            this.tcAdmin.Controls.Add(this.tpBill);
             this.tcAdmin.Controls.Add(this.tpTable);
             this.tcAdmin.Controls.Add(this.tpAccount);
             this.tcAdmin.Controls.Add(this.tpCategoryFood);
@@ -1569,13 +1496,6 @@ namespace Cafee
             this.dgvEmployees.TabIndex = 0;
             this.dgvEmployees.SelectionChanged += new System.EventHandler(this.dgvEmployees_SelectionChanged);
             // 
-            // dtpFromData
-            // 
-            this.dtpFromData.Location = new System.Drawing.Point(3, 4);
-            this.dtpFromData.Name = "dtpFromData";
-            this.dtpFromData.Size = new System.Drawing.Size(288, 28);
-            this.dtpFromData.TabIndex = 3;
-            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -1628,10 +1548,6 @@ namespace Cafee
             this.panel22.PerformLayout();
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
-            this.tpBill.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dagvBill)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.tcAdmin.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1726,12 +1642,6 @@ namespace Cafee
         private Panel panel21;
         private Button btnDeleteTable;
         private Button btnAddTable;
-        private TabPage tpBill;
-        private Panel panel2;
-        private DataGridView dagvBill;
-        private Panel panel1;
-        private Button btnViewBill;
-        private DateTimePicker dtpToData;
         private TabControl tcAdmin;
         private Panel panel7;
         private TabControl tabCategoryFood;
@@ -1801,6 +1711,5 @@ namespace Cafee
         private Label label27;
         private TextBox txtEAdd;
         private DateTimePicker dtEBirthday;
-        private DateTimePicker dtpFromData;
     }
 }

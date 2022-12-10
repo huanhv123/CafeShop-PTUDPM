@@ -24,6 +24,8 @@ namespace Cafee
     {
 
         bool hasUploadImage = false;
+        string cateNode;
+        string typeCate;
         public FormAdmin()
         {
             InitializeComponent();
@@ -40,16 +42,12 @@ namespace Cafee
         }
         private void FormAdmin_Load(object sender, EventArgs e)
         {
-            //FormLoadAccount();
             FormLoadTreeNodeCategory();
             FormLoadAccount();
-            //FormLoadCategory();
             FormLoadTable();
             FormLoadBill();
             FormLoadEmployees();
-            //FillChart();
         }
-
         private void FormLoadTable()
         {
             List<Table> tables = TableBUS.Instance.ListALLTable();
@@ -102,7 +100,6 @@ namespace Cafee
             }
             tvCategory.Nodes.Add(root);
         }
-
         private void FormLoadBill()
         {
             List<Bill> bill = BillBUS.Instance.ListALLBill();
@@ -113,41 +110,6 @@ namespace Cafee
             List<Employees> employees = EmployeesBUS.Instance.ListALLEmployees();
             dgvEmployees.DataSource = employees;
         }
-        //private void FormLoadCategory()
-        //{
-        //    List<FoodCategory> foodCategorieList = FoodCategoryBUS.Instance.ListAllFoodCategory();
-        //    cbFood.DataSource = foodCategorieList;
-        //    cbFood.DisplayMember = "name";
-        //    cbFood.ValueMember = "id";
-
-        //    List<Category> categories = CategoryBUS.Instance.ListAllCategory();
-        //    int countCate = 0;
-        //    foreach (Category cate in categories)
-        //    {
-        //        TreeNode node = new TreeNode();
-        //        node.Tag = cate.id+" cate";
-        //        node.Text = cate.name;
-        //        ilCateFood.Images.Add(CategoryBUS.Instance.ConvertBinaryToImage(cate.icon));
-        //        node.ImageIndex = countCate;
-        //        node.SelectedImageIndex = countCate;
-        //        List<FoodCategory> foodCateList = FoodCategoryBUS.Instance.ListFoodCategoryByCategory(cate.id);
-        //        foreach (FoodCategory foodCate in foodCateList)
-        //        {
-        //            TreeNode subNode = new TreeNode();
-        //            subNode.Text = foodCate.name;
-        //            ilCateFood.Images.Add(FoodCategoryBUS.Instance.ConvertBinaryToImage(foodCate.icon));
-        //            subNode.ImageIndex = countCate+1;
-        //            subNode.SelectedImageIndex = countCate+1;
-        //            subNode.Tag = foodCate.id + " cateFood";
-        //            node.Nodes.Add(subNode);
-        //            countCate++;
-        //        }
-        //        root.Nodes.Add(node);
-        //        countCate++;
-        //    }
-        //    tvCategory.Nodes.Add(root);
-        //}
-
         private void dgvTable_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvTable.SelectedRows.Count > 0)
@@ -163,7 +125,6 @@ namespace Cafee
                 }
             }
         }
-
         private void btnAddTable_Click(object sender, EventArgs e)
         {
             Table table = new Table()
@@ -183,7 +144,6 @@ namespace Cafee
             }
 
         }
-
         private void btnUpdateTable_Click(object sender, EventArgs e)
         {
             Table tables = new Table()
@@ -202,7 +162,6 @@ namespace Cafee
                 MessageBox.Show("Update Fail!");
             }
         }
-
         private void btnDeleteTable_Click(object sender, EventArgs e)
         {
 
@@ -354,7 +313,6 @@ namespace Cafee
             }
             dgvEmployees.DataSource = employees;
         }
-
         private void dgvEmployees_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvEmployees.SelectedRows.Count > 0)
@@ -384,7 +342,6 @@ namespace Cafee
                 phone = txtEPhone.Text,
                 position = txtEPosition.Text,
                 workingstatus = (int)cbEStatus.SelectedItem,
-
             };
 
             bool result = EmployeesBUS.Instance.AddEmployees(employees);
@@ -421,9 +378,7 @@ namespace Cafee
                 MessageBox.Show("Update Fail!");
             }
         }
-        string cateNode ;
-        string typeCate;   
-       private void btnResetPass_Click(object sender, EventArgs e)
+        private void btnResetPass_Click(object sender, EventArgs e)
         {
             tbPass.ReadOnly = false;
         }
@@ -743,22 +698,5 @@ namespace Cafee
                 pbCategory.Image = null;
             }
         }
-
-        private void FillChart()
-        {
-            SqlConnection con = new SqlConnection("Data Source=LAPTOP-0H23TTCU;Initial Catalog=CafeShop;Persist Security Info=True;User ID=sa;Password=1");
-
-            DataTable dt = new DataTable();
-            con.Open();
-            SqlDataAdapter ad = new SqlDataAdapter("select idTable,Total from Bill", con);
-            ad.Fill(dt);
-            //chartBill.DataSource = dt;
-            //con.Close();
-
-            //chartBill.Series["Bill"].XValueMember = "IdTable";
-            //chartBill.Series["Bill"].YValueMembers = "Total";
-            //chartBill.Titles.Add("Bill");
-        }
-
     }
 }
