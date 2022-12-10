@@ -81,7 +81,7 @@ namespace Cafee
 
         private void StatisticalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormStatistical statistical = new FormStatistical();
+            DashboardApp.FormStatistical statistical = new DashboardApp.FormStatistical();
             statistical.MdiParent = this;
             statistical.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             statistical.Dock = DockStyle.Fill;

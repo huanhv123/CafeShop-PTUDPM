@@ -46,7 +46,7 @@ namespace Cafee
             FormLoadTable();
             FormLoadBill();
             FormLoadEmployees();
-            FillChart();
+            
         }
 
         private void FormLoadTable()
@@ -567,22 +567,8 @@ namespace Cafee
             }
         }
 
-        //Statistical
-        private void FillChart()
-        {
-            SqlConnection con = new SqlConnection("Data Source=LAPTOP-0H23TTCU;Initial Catalog=CafeShop;Persist Security Info=True;User ID=sa;Password=1");
-
-            DataTable dt = new DataTable();
-            con.Open();
-            SqlDataAdapter ad = new SqlDataAdapter("select idTable,Total from Bill", con);
-            ad.Fill(dt);
-            chartBill.DataSource = dt;
-            con.Close();
-
-            chartBill.Series["Bill"].XValueMember = "IdTable";
-            chartBill.Series["Bill"].YValueMembers = "Total";
-            chartBill.Titles.Add("Bill");
-        }
+       
+       
 
 
     }
