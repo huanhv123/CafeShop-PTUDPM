@@ -88,10 +88,12 @@
     <Compile Include="DAO\MenuDAO.cs" />
     <Compile Include="DAO\TableDao.cs" />
     <Compile Include="DataProvider.cs" />
+    <Compile Include="Db\DbConnection.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Bill.cs" />
     <Compile Include="DTO\BillInfo.cs" />
     <Compile Include="DTO\Category.cs" />
+    <Compile Include="DTO\Dashboard.cs" />
     <Compile Include="DTO\Employees.cs" />
     <Compile Include="DTO\Food.cs" />
     <Compile Include="DTO\FoodCategory.cs" />
@@ -142,7 +144,7 @@
     <Compile Include="FormStatistical.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormStatistical.Designer.cs">
+    <Compile Include="FormStatistical.designer.cs">
       <DependentUpon>FormStatistical.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTestcs.cs">

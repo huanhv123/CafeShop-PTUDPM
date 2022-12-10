@@ -46,7 +46,6 @@ D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.csproj.CoreCompileInputs
 D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.exe
 D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.pdb
 D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.FormBill.resources
-D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\Cafee.FormStatistical.resources
 D:\hoc tap\chuyen nganh\PTUDPM\ccc\CafeShop-PTUDPM\Project\Cafee\bin\Debug\Cafee.exe.config
 D:\hoc tap\chuyen nganh\PTUDPM\ccc\CafeShop-PTUDPM\Project\Cafee\bin\Debug\Cafee.exe
 D:\hoc tap\chuyen nganh\PTUDPM\ccc\CafeShop-PTUDPM\Project\Cafee\bin\Debug\Cafee.pdb
@@ -195,3 +194,4 @@ D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\bin\Debug\pt\Microsoft.ReportViewer.WebF
 D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\bin\Debug\ru\Microsoft.ReportViewer.WebForms.resources.dll
 D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
 D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+D:\PTUDPM\CafeShop-PTUDPM\Project\Cafee\obj\Debug\DashboardApp.FormStatistical.resources
