@@ -1,0 +1,224 @@
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\obj\Debug\CafeeShop.csproj.AssemblyReference.cache
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\obj\Debug\CafeeShop.csproj.SuggestedBindingRedirects.cache
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\obj\Debug\CafeeShop..resources
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\obj\Debug\Cafee.FormAccountProfile.resources
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\obj\Debug\Cafee.FormHome.resources
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\obj\Debug\Cafee.FormLogin.resources
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\obj\Debug\Cafee.FormMain.resources
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\obj\Debug\Cafee.FormPrintBill.resources
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\obj\Debug\Cafee.FormStatistical.resources
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\obj\Debug\CafeeShop.Properties.Resources.resources
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\obj\Debug\CafeeShop.csproj.GenerateResource.cache
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\obj\Debug\Cafee.FormAdmin.resources
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\obj\Debug\CafeeShop.csproj.CoreCompileInputs.cache
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\CafeeShop.exe.config
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\CafeeShop.exe
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\CafeeShop.pdb
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\System.Configuration.Abstractions.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\EnvDTE.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\stdole.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\System.Configuration.Abstractions.pdb
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\obj\Debug\CafeeShop.csproj.CopyComplete
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\obj\Debug\CafeeShop.exe
+D:\hoc tap\chuyen nganh\kien truc PM\FinalProject\CafeeShop\obj\Debug\CafeeShop.pdb
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\CafeeShop.exe.config
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\CafeeShop.exe
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\CafeeShop.pdb
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.Configuration.Abstractions.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\EnvDTE.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\stdole.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.Configuration.Abstractions.pdb
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\obj\Debug\CafeeShop.csproj.AssemblyReference.cache
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\obj\Debug\CafeeShop.csproj.SuggestedBindingRedirects.cache
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\obj\Debug\Cafee.FormAccountProfile.resources
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\obj\Debug\Cafee.FormAdmin.resources
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\obj\Debug\Cafee.FormHome.resources
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\obj\Debug\Cafee.FormLogin.resources
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\obj\Debug\Cafee.FormMain.resources
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\obj\Debug\Cafee.FormStatistical.resources
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\obj\Debug\CafeeShop.Properties.Resources.resources
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\obj\Debug\CafeeShop.csproj.GenerateResource.cache
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\obj\Debug\CafeeShop.csproj.CoreCompileInputs.cache
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\obj\Debug\CafeeShop.csproj.CopyComplete
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\obj\Debug\CafeeShop.exe
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\obj\Debug\CafeeShop.pdb
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\obj\Debug\CafeeShop.FormPrint.resources
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Authentication.Abstractions.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Authentication.Core.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Authorization.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Authorization.Policy.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Hosting.Abstractions.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Http.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Http.Extensions.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Http.Features.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Mvc.Abstractions.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Mvc.Core.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Routing.Abstractions.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Routing.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.WebUtilities.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.DotNet.PlatformAbstractions.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.DependencyModel.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.Localization.Abstractions.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.Localization.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.ObjectPool.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.Options.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Net.Http.Headers.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Newtonsoft.Json.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.Buffers.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.ComponentModel.Annotations.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.Memory.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.Numerics.Vectors.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.Text.Encodings.Web.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Authentication.Abstractions.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Authentication.Core.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Authorization.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Authorization.Policy.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Hosting.Abstractions.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Http.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Http.Abstractions.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Http.Extensions.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Http.Features.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Mvc.Abstractions.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Mvc.Core.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Mvc.DataAnnotations.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Routing.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.Routing.Abstractions.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.AspNetCore.WebUtilities.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.Hosting.Abstractions.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.Localization.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.Localization.Abstractions.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.ObjectPool.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.Options.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Microsoft.Net.Http.Headers.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\Newtonsoft.Json.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.Buffers.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.Memory.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.Numerics.Vectors.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.Text.Encodings.Web.xml
+D:\hoc tap\chuyen nganh\PTUDPM\FinalProject\CafeeShop\bin\Debug\System.Threading.Tasks.Extensions.xml
